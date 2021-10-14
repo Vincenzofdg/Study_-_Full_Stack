@@ -1,0 +1,36 @@
+.header {
+  min-height: 15vh;
+  display: flex;
+  flex-direction: row;
+  background-color: #0fa36b;
+  align-items: center;
+  color: White;
+  gap: 10px;
+}
+
+.header > nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.header > nav a {
+  cursor: pointer;
+  padding: 1rem;
+  color: white;
+  background-color: transparent;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.header > nav img {
+  height: 3rem;
+}
+
+.link-hover > a:hover {
+  background-color: #37d699;
+}

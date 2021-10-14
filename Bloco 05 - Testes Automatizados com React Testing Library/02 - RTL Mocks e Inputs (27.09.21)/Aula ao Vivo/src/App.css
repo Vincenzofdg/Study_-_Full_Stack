@@ -1,0 +1,103 @@
+.App {
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.App img {
+  margin-bottom: 100px;
+}
+
+
+/* Source: https://codepen.io/fidalgodev/pen/bOGaVy */
+.form__label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+}
+
+.form__input {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+	margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+  transform: translateY(-4rem);
+}
+
+/* Source: https://codepen.io/fossheim/pen/RwPeVKG */
+
+:root {
+  --background: #f7ff64;
+  --background-accent: #e2f759;
+  --background-accent-2: #dad417;
+  --light: #d6de34;
+  --dark: #a5a51a;
+  --text: #0b0a06;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: var(--light);
+  height: 70px;
+  width: 300px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 30px;
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  background-size: 100% 100%;
+  box-shadow: 0 0 0 7px var(--light) inset;
+  margin-bottom: 15px;
+}
+
+button:hover {
+  background-image: linear-gradient(
+    145deg,
+    transparent 10%,
+    var(--dark) 10% 20%,
+    transparent 20% 30%,
+    var(--dark) 30% 40%,
+    transparent 40% 50%,
+    var(--dark) 50% 60%,
+    transparent 60% 70%,
+    var(--dark) 70% 80%,
+    transparent 80% 90%,
+    var(--dark) 90% 100%
+  );
+  animation: background 3s linear infinite;
+}
+
+@keyframes background {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}

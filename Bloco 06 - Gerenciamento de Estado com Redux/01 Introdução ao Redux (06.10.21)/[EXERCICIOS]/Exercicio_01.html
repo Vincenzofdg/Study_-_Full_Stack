@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 01</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        height: 50px;
+        width: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <p>Color: <span id="value">white</span></p>
+      <button id="previous">Previous color</button>
+      <button id="next">Next color</button>
+    </div>
+
+    <script>
+      const INICIAL = {
+        colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
+        index: 0,
+      };  
+
+      function funcAtual(state = INICIAL, action) {
+        switch (action.type) {
+          case 'NEXT':
+          return{
+            ...state,
+            index: state.index === state.colors.length - 1 ? 0 : state.index + 1,
+          };
+          case 'PREVIOUS':
+          return{
+            ...state,
+            index: state.index === 0 ? state.colors.length - 1 : state.index - 1,
+          };
+          default:
+            return state;
+        }
+      }
+
+      const store = Redux.createStore(
+        funcAtual,
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+      )
+
+      const nextColor = { type: 'NEXT', value: 1 };
+      const previousColor = { type: 'PREVIOUS', value: 1 };
+
+      document.getElementById('next').addEventListener('click', () => store.dispatch(nextColor));
+      document.getElementById('previous').addEventListener('click', () => store.dispatch(previousColor));
+
+      store.subscribe(() => {
+        const { colors, index } = store.getState();  
+        
+        document.getElementById('value').innerHTML = colors[index];
+        document.getElementById('value').style.background = colors[index];
+      });
+
+    </script>
+
+  </body>
+</html>

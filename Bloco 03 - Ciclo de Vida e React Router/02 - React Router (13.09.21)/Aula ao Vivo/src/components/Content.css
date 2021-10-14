@@ -1,0 +1,8 @@
+.content {
+  height: 50vh;
+  border: 2px solid green;
+  place-content: center;
+  display: flex;
+  padding-top: 30vh;
+  font-size: 2em;
+}

@@ -1,0 +1,10 @@
+.App {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.img {
+  width: 50%;
+  height: 50%;
+}
