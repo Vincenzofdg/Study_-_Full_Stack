@@ -3,7 +3,7 @@
 import { createStore, combineReducers } from 'redux';
 import rootReducer from '../reducers';
 // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-importe { composeWithDevTools } from 'redux-devtools-extension';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 const store = createStore(rootReducer); // Sempre receberá o paramentro rootReducer
 

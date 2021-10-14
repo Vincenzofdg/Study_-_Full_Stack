@@ -2,5 +2,6 @@
 // Neste caso foi criada apenas uma key => state
 
 export const newAction = (state) => ({ 
-  type: 'NEW_ACTION', state
+  type: 'NEW_ACTION',
+  state,
 });
