@@ -1,0 +1,5 @@
+@media screen and (max-width: 768px) {
+  body {
+    background-color: red !important; /*Fazendo com que uma regra sempre seja respeitada*/
+  }
+}

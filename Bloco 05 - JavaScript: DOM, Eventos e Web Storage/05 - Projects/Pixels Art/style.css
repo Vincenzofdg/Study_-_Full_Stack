@@ -1,0 +1,34 @@
+.middle-side {
+  text-align: center;
+}
+
+.color-options {
+  font-size: 15px;
+}
+
+.color {
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  height: 40px;
+  width: 40px;
+  font-size: large;
+  margin-top: -10px;
+  margin-left: -4px;
+}
+
+.pixel {
+  margin-bottom: -5px;
+  background-color: white;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+#board-size, #generate-board {
+  display: inline-block;
+}

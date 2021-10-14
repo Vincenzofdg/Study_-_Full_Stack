@@ -1,0 +1,42 @@
+/*1° Requisito*/
+body {
+    background-color: rgb(253, 251, 251);    
+}
+/*------------*/
+#cabecalho {
+    position: fixed;
+    top: 0px;
+}
+#minha_foto {
+    width: 350px;
+    border: 50px;
+}
+/*13° 14° Requisito (Bonus)*/
+#listas{
+    background-color: black;
+    padding: 10px 25px;
+    margin: 50px;
+    border: 15px solid red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:  20px;
+    line-height: 30px;
+}
+#licoes_aprendidas {
+    background-color: aqua;
+    color: black;
+    border: 85px;
+}
+#licoes_a_aprender {
+    background-color: blue;
+    color: white;
+
+}
+/*------------*/
+
+
+.lado-esquerdo {
+    display: inline-block;
+}
+.lado-direito {
+    display: inline-block;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício HTML e CSS: Forms</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form action="" method="GET">
+    <fieldset>
+      <legend>1° Parte</legend>
+      <label for="texto-id">Digite:
+        <textarea maxlength="40" name="texto" id="texto-id" required></textarea></label>
+      <br>
+      <label for="email-id">Email:
+        <input type="email" name="email" maxlength="50" id="email-id" required></label>
+      <br>
+      <label for="cpf-id">CPF:
+        <input type="text" maxlength="11" name="cpf" id="cpf-id" required></label>
+      <br>
+      <label for="endereco-id">Endereço:
+        <textarea maxlength="200" name="endereco" id="endereco-id" required></textarea></label>
+      <label for="estados-id"> Estado:
+        <select name="estados" id="estados-id">
+          <option selected>...</option>
+        </select></label>
+      <br>
+      <label for="radio-id">
+        <label for="casa"><input type="radio" name="selecione" id="casa" value="casa" required>Casa</label>
+        <label for="apartamento"><input type="radio" name="selecione" id="apartamento" value="apartamento"
+            required>Apartamento</label>
+      </label>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>Parte 2</legend>
+      <label for="curriculo-id">Resumo do curriculo:
+        <textarea maxlength="1000" name="curriculo" id="curriculo-id" required></textarea></label>
+      <br><br>
+      <label for="cargo-id">Cargo:
+        <input type="text" maxlength="40" name="cargo" id="cargo-id" required></label>
+      <br>
+      <label for="descricao-id">Descrição do cargo:
+        <textarea maxlength="500" name="descricao" id="descricao-id" required></textarea></label>
+      <br>
+      <label for="data-inicio-id">Inicio:
+        <input type="date" id="data-inicio-id"></label>
+      <label for="data-termino-id">Termino:
+        <input type="date" id="data-termino-id"></label>
+    </fieldset>
+    <button type="submit" id="btn-enviar">Enviar</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
