@@ -43,7 +43,7 @@ class TrafficSignal extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  color: state.color,
+  color: state.signal.color,
 });
 
 const mapDispatchToProps = (dispatch) => ({
