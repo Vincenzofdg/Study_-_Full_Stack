@@ -1,4 +1,4 @@
-![Fluxo REdux](fluxo-react-redux.gif)
+![Fluxo Redux](fluxo-react-redux.gif)
 
 1. Um Store é criado para armazenar todos o estado da aplicação;
 2.  O Store é disponibilizado através do Provider para todos os componentes da aplicação;
