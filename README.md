@@ -14,4 +14,3 @@ Turma: 14 A.
 
 **05. Ciência da Computação**
 
-...
