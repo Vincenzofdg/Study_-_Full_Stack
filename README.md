@@ -50,4 +50,18 @@
 
 **06. Projeto: Trybe Wallet**
 
+## Bloco 07: Projeto: Jogo de Trivia
+
+**01. Projeto: Jogo de Trivia**
+
+## Bloco 08: Context API e React Hooks
+
+**01. Context API do React**
+
+**02. React Hooks: useState e use Context**
+
+**03. React Hooks: useEffect e Hooks customizados**
+
+**04. Projeto: StarWars Datatable com Context API e Hooks**
+
 
