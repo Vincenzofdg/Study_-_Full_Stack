@@ -2,12 +2,12 @@
   width: 300px;
 }
 
-.car-right {
+.right {
   transform: translateX(200px);
   width: 100px;
 }
 
-.car-left {
+.left {
   width: 100px;
 }
 
@@ -15,10 +15,4 @@
   display: flex;
   justify-content: space-around;
   width: 300px;
-}
-
-.container {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-around;
 }

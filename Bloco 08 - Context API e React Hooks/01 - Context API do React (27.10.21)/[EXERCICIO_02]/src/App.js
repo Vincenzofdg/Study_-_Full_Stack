@@ -3,11 +3,18 @@ import TrafficSignal from './TrafficSignal';
 import './App.css';
 import Cars from './Cars';
 
+import CarProvider from './context/CarProvider';
+import LightProvider from './context/LightProvider';
+
 function App() {
   return (
     <div className="container">
-      <Cars />
-      <TrafficSignal />
+      <CarProvider>
+        <Cars />
+      </CarProvider>
+      <LightProvider>
+        <TrafficSignal />
+      </LightProvider>
     </div>
   );
 }
