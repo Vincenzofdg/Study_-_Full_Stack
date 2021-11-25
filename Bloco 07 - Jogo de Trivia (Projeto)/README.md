@@ -303,3 +303,5 @@ Recomendamos que o Redux e o Router sejam configurados nesse requisito, para que
 
 ***Obs: A maneira como a API deve ser estruturada segue o seguinte modelo: https://opentdb.com/api_config.php***
 
+---
+

@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+table, th, td {
+  border: 1px solid #001219;
+  color: black;
+}
+
+table {
+  background-color: #4adb37;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+  border: 3px solid black;
+  letter-spacing: 0.2px;
+  padding: 3.5px;
+  text-align: center;
+}
+
+th {
+  text-shadow: 0.5px 0.5px 0.5px 001219;
+}
+
+tbody tr:nth-child( odd ) {
+  background-color: rgb(255, 218, 149);
+}
+
+tbody tr:nth-child( even ) {
+  background-color: rgb(243, 179, 60);
+}

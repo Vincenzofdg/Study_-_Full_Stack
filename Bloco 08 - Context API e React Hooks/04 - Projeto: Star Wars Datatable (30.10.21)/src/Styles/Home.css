@@ -1,0 +1,19 @@
+body {
+  background-color: black;
+}
+
+button {
+  background: linear-gradient(to bottom, black, #fff7);
+  background-color: white;
+  border-radius: 2px;
+  color: black;
+  font-weight: 200;
+  height: 30px;
+  text-align: center;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: white;
+  color: white;
+}

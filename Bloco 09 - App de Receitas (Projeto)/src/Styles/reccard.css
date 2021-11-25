@@ -1,0 +1,16 @@
+.container {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.rec-card {
+  display: inline-block;
+  padding: 14px;
+  text-align: center;
+  width: 51%;
+}
+
+.start-recipe {
+  bottom: 0;
+  position: fixed;
+}

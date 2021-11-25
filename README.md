@@ -64,4 +64,6 @@
 
 **04. Projeto: StarWars Datatable com Context API e Hooks**
 
+## Bloco 09: Projeto: App de Receitas
 
+**01. Projeto: App de Receitas**

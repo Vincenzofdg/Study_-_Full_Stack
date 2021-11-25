@@ -1,11 +1,3 @@
-## Lista de requisitos
-
-### Página de Login
-
-Crie uma página para que a pessoa usuária se identifique, com email e senha. Esta página deve ser a página inicial de seu aplicativo.
-
-  ![image](login.gif)
-
 #### 1. Crie uma página inicial de login com os seguintes campos e características:
 
   * A rota para esta página deve ser ‘/’.
@@ -330,4 +322,5 @@ O que será testado:
   ```
   - O botão deve estar dentro do último item da linha da tabela e deve possuir `data-testid="edit-btn"
   - Ao ser clicado, o botão habilita um formulário para editar a linha da tabela. Ao clicar em "Editar despesa" ela é atualizada, alterando o estado global
+  ```
 
