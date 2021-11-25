@@ -1,16 +1,12 @@
-**[Trybe - Escola de Programação](https://www.betrybe.com/)**
+## Bloco 01: Docker - Utilizando Containers
 
-Curso realizado em: 2021 - 2022.
+**01. Introdução ao Back-end**
 
-Turma: 14 A.
+**02. Utilizando Containers com Docker**
 
-### Curso de duração de 1 ano. Dividido em 4 grandes blocos, sendo eles:
+**03. Manipulação e Criação de Imagens no Docker**
 
-**01. Fundamentos do Desenvolvimento Web;**
+**04. Orquestrando Containers com Docker Compose**
 
-**02. Desenvolvimento Front-end**
-
-**03. Desenvolvimento Back-end**
-
-**05. Ciência da Computação**
+**05. Projeto: Docker Todo-List**
 
