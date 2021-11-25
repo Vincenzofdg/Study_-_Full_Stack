@@ -16,8 +16,13 @@ Eemplo o próprio sistema operacional Ubuntu possui uma imagem oficial no Docker
 
 **O que é o [Docker Hub](https://hub.docker.com/)?** É o principal repositório de imagens Docker atualmente. Nele, possuímos o que é chamado de Registro (`Registry` é um sistema de armazenamento e entrega, no qual podemos ter um usuário com nossas próprias imagens), onde requisitamos essas imagens.
 
+## Fluxo Padrão
 
+IMAGEM FLUXO
 
+**1º Tudo começa no arquivo Dockerfile**
+	. Instruções necessárias para que possamos gerar uma imagem;
+	. Informações sobre qual sistema operacional usar, e quais comandos dever ser execultados apor a imagem rodar em um container.
 
 
 
