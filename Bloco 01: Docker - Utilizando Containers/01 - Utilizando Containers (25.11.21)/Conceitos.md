@@ -32,6 +32,9 @@ IMAGEM FLUXO
 	
 	. O Registro mais comum é o Docker Hub, mas temos outros exemplos, como mostrado na imagem.
 
+**3º Rodar a imagem do container com o comando `run`**
+
+	. Dizer ao container o que deve acontecer, permanecer ativo ou não (caso o contrário o container é encerrado).
 
 
 
