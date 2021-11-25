@@ -8,6 +8,5 @@ CAso não esteja num distro baseada nop Ubuntu => https://docs.docker.com/engine
 ```
 sudo apt-get remove docker* containerd runc
 ```
-
 Caso retorne um erro significa que o docker nunca foi instalado nesta máquina.
 
