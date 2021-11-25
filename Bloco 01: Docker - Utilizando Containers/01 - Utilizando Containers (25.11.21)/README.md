@@ -2,11 +2,14 @@ Extenção para o VSCode => https://marketplace.visualstudio.com/items?itemName=
 
 CAso não esteja num distro baseada nop Ubuntu => https://docs.docker.com/engine/install/
 
-## Intalando o Docker na Máquina.
-
-### 1º Desinstalando versões anteriores (Caso já tenha instalado alguma vez)
+## Para Remover o Docker.
 ```
-sudo apt-get remove docker* containerd runc
+sudo apt-get purge docker-ce docker-ce-cli containerd.io
 ```
-Caso retorne um erro significa que o docker nunca foi instalado nesta máquina.
-
+**Para remover containers , volumes e configurações personalizadas que não são removidas automaticamente pelo apt-get:**
+```
+sudo rm -rf /var/lib/docker
+```
+```
+sudo rm -rf /var/lib/containerd
+```
