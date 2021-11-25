@@ -26,6 +26,11 @@ IMAGEM FLUXO
 	
 	. Informações sobre qual sistema operacional usar, e quais comandos dever ser execultados apor a imagem rodar em um container.
 
+**2º Aplicar push ou pull em uma imagem no Resitry**
+
+	. Possibilidade de dar pull em sua própria imagem ou outra;
+	
+	. O Registro mais comum é o Docker Hub, mas temos outros exemplos, como mostrado na imagem.
 
 
 
