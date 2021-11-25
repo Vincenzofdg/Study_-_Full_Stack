@@ -52,6 +52,34 @@ Significado de cada coluna:
     
     . **NAMES:** O apelido do container, como não definimos nenhum, foi criado um aleatório.
 
+**Rodando um comando adicional antes de terminar o container**
 
+No Docker é possível executar comandos de terminal no container antes que ele seja encerrado (sobretudo se quisermos manter ele ativo por mais tempo que o normal).
 
+Sintax:
+```
+docker container run <nome-da-imagem>:<tag> <comando> <argumentos-do-comando>
+```
 
+Imprimir na tela um "Hello World!" no terminal do Ubuntu, usando o comando echo do shell:
+```
+docker container run ubuntu echo 'Hello Tryber!'
+```
+
+**Rodando o container de forma interativa**
+
+É só passar o parâmetro -ti ao comando run que dá acesso a esse terminal:
+	
+	. -t => Indica pro docker que estamos requisitando um terminal no container que consiga imprimir o retorno dos nossos comandos; 
+	
+	. -i => Estabelece uma interface de comunicação física com esse terminal, no caso, por meio do teclado.
+	
+```
+docker container run -ti ubuntu
+```
+
+dentro da máquina virtual:
+
+	. rode o comando `cat /etc/lsb-release` para obter informações da máquina virtual;
+	
+	. `exit` para sair da máquina virtual.
