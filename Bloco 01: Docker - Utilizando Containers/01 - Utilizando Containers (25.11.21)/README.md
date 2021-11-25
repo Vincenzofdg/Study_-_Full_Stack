@@ -1,8 +1,4 @@
-Extenção para o VSCode => **[Link](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)**
-
-Documentação => **[Link](https://docs.docker.com/)**
-
-Caso não esteja num distro baseada no Ubuntu => **[Link](https://docs.docker.com/engine/install/)**
+**[Extenção para o VSCode](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)** | **[Documentação Oficial](https://docs.docker.com/)** | **[Instalando em outra Distro sem ser Ubuntu](https://docs.docker.com/engine/install/)**
 
 ## Para Remover o Docker.
 ```
