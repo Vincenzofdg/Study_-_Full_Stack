@@ -21,7 +21,9 @@ Eemplo o próprio sistema operacional Ubuntu possui uma imagem oficial no Docker
 IMAGEM FLUXO
 
 **1º Tudo começa no arquivo Dockerfile**
+
 	. Instruções necessárias para que possamos gerar uma imagem;
+	
 	. Informações sobre qual sistema operacional usar, e quais comandos dever ser execultados apor a imagem rodar em um container.
 
 
