@@ -1,6 +1,14 @@
 body {
-    text-align: center;
     background-color: silver;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
 }
 
 .newspaper {
