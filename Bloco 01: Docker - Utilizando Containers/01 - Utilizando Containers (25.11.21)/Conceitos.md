@@ -1,0 +1,28 @@
+O **container** é um processo Docker que, internamente, possui tudo aquilo que é necessário para seu funcionamento: Sistema Operacional (Binários e Bibliotecas) e recursos necessários para sua aplicação.
+
+A **imagem** é uma espécie de "fotografia" de um container , nós resgatamos uma imagem, quando queremos iniciar um novo container a partir de uma estrutura já conhecida.
+
+
+## Containers
+
+Um container não é uma máquina virtual, pois embora compartilhem de mesmas características, o container é uma instância isolada (tem apenas uma finalidade) e compartilha dos mesmos recursos do sistema operacional hospedeiro, o que damos o nome de Virtualização a nível de Sistema Operacional (OS-level virtualization).
+
+**Um container não deve ser utilizado para abrigar várias aplicações, e é justamente por isso que ele ocupa muito menos espaço que uma VM. Sua tendência é de manter somente o essencial no seu conteúdo.**
+
+## Imagens
+
+Imagens podem se referir a praticamente qualquer tipo de container.
+Eemplo o próprio sistema operacional Ubuntu possui uma imagem oficial no Docker Hub ([Imagem Ubuntu](https://hub.docker.com/_/ubuntu)). 
+
+**O que é o Docker Hub?** É o principal repositório de imagens Docker atualmente. Nele, possuímos o que é chamado de Registro (`Registry` é um sistema de armazenamento e entrega, no qual podemos ter um usuário com nossas próprias imagens), onde requisitamos essas imagens.
+
+
+
+
+
+
+
+
+DUVIDAS:
+
+01 UMA IMAGEM É SERIA UMA MAQUINA VIRTUAL ENTAO?
