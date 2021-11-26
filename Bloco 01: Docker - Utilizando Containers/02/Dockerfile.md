@@ -16,7 +16,7 @@ Ao criarmos uma nova imagem, sempre devemos baseá-la em uma outra, para isso ut
 
 ## WORKDIR
 
-Definir um "diretório de trabalho", que será utilizado como base para a execução dos comandos. ==> `WORKDIR <DIRETORIO QUE SERA UTILIZADO>'`
+Definir um "diretório de trabalho", que será utilizado como base para a execução dos comandos. ==> `WORKDIR <DIRETORIO UTILIZADO>'`
 
 **Exermplo:** `WORKDIR /app`
 
