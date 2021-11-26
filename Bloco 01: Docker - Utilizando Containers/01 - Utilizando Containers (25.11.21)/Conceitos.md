@@ -18,7 +18,7 @@ Eemplo o próprio sistema operacional Ubuntu possui uma imagem oficial no Docker
 
 ## Fluxo Padrão
 
-IMAGEM FLUXO
+![image](fluxo.png)
 
 **1º Tudo começa no arquivo Dockerfile**
 
