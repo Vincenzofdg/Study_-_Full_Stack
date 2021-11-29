@@ -39,3 +39,12 @@ Com o comando COPY conseguimos montar nossa estrutura do código fonte dentro da
 COPY package*.json ./
 ```
 
+## RUN
+
+**Executa uma lista de comandos durante a criação da imagem**
+```
+RUN ["<COMANDO>", "<SUBCOMANDO>", "<PARAMETRO-1>", ... , "<PARAMETRO-N>"]
+```
+
+No caso do `RUN npm install`. É interessante criarmos um arquivo chamado dockerignore para adicionarmos lá a node_modules, de modo que ela não seja copiada. 
+

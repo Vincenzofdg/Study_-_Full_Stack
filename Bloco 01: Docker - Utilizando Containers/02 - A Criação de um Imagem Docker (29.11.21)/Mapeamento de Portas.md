@@ -18,4 +18,4 @@ Estamos na porta padrão (80) e podemos acessar a hospedagem em `http://localhos
 
 **Iniciar o container:** `docker start site-novo`
 
-**Gerando container com um porta especifica:** `docker container run -d -p 54321:80 httpd:2.4`
+**Gerando container com um porta especifica:** `docker container run -d -p 3000:80 httpd:2.4`
