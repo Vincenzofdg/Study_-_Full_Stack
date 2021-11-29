@@ -57,3 +57,35 @@ Porém, para esse fim recomendamos utilizar ENTRYPOINT (Ponto de entrada em port
 ENTRYPOINT [ "/bin/echo" ]
 CMD [ "Hello World" ]
 ```
+## Gerando a Imagem
+
+docker file esta:
+```
+FROM node:14-alpine AS build
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
+FROM nginx:1.16.0-alpine AS prod
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 80
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
+```
+
+Para que possamos consolidar as instruções em uma imagem, devemos rodar o comando:
+```
+docker image build -t <name:tag> <origem_docker_file>
+```
+```
+docker image build -t react-dockerized:v1 .
+```
+
+Digite `docker images` para verificar se a imagem foi gerada.
+
+Para gerar o container em modo background no modo interativo e nomear o container (reactdockerized):
+```
+docker run -dit -p 8000:80 --name reactdockerized react-dockerized:v1
+```
+
