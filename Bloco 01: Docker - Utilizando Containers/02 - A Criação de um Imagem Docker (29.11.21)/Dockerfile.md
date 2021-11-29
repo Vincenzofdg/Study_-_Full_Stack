@@ -8,23 +8,13 @@ O Dockerfile nada mais é do que um arquivo de configuração usado pelo Docker 
 
 3. `touch Dockerfile`
 
-## FROM
-
-Ao criarmos uma nova imagem, sempre devemos baseá-la em uma outra, para isso utilizamos o FROM. Por exemplo, para criar uma nova imagem que rodará sob um ubuntu: `FROM ubuntu:latest`
+**FROM:** Ao criarmos uma nova imagem, sempre devemos baseá-la em uma outra, para isso utilizamos o FROM. Por exemplo, para criar uma nova imagem que rodará sob um ubuntu: `FROM ubuntu:latest`
 
 É recomendado utilizar sempre uma versão específica de nossa imagem base em nossas imagens de produção, por exemplo `ubuntu:8` ao invés de `ubuntu:latest`
 
-## WORKDIR
+**WORKDIR:** Definir um "diretório de trabalho", que será utilizado como base para a execução dos comandos. ==> `WORKDIR <DIRETORIO UTILIZADO>`. **Exermplo:** `WORKDIR /app`
 
-Definir um "diretório de trabalho", que será utilizado como base para a execução dos comandos. ==> `WORKDIR <DIRETORIO UTILIZADO>`
-
-**Exermplo:** `WORKDIR /app`
-
-## COPY
-
-Vimos que conseguimos preparar nossa imagem para executar por exemplo, uma aplicação dentro do container, porém, precisamos do código fonte para rodá-lo.
-
-Para isso utilizamos o COPY (Copiar em português) , com ele conseguimos copiar diretórios e arquivos para dentro da nossa imagem:
+**COPY:** Vimos que conseguimos preparar nossa imagem para executar por exemplo, uma aplicação dentro do container, porém, precisamos do código fonte para rodá-lo. Para isso utilizamos o COPY (Copiar em português) , com ele conseguimos copiar diretórios e arquivos para dentro da nossa imagem:
 ```
 COPY ["<ARQUIVO_1>","<ARQUIVO_2>",...,"<ARQUIVO_X>", "<PASTA-DESTINO>"]
 ```
@@ -39,9 +29,7 @@ Com o comando COPY conseguimos montar nossa estrutura do código fonte dentro da
 COPY package*.json ./
 ```
 
-## RUN
-
-**Executa uma lista de comandos durante a criação da imagem**
+**RUN:** Executa uma lista de comandos durante a criação da imagem
 ```
 RUN ["<COMANDO>", "<SUBCOMANDO>", "<PARAMETRO-1>", ... , "<PARAMETRO-N>"]
 ```
