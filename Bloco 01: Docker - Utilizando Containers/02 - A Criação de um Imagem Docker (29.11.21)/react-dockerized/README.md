@@ -59,7 +59,7 @@ CMD [ "Hello World" ]
 ```
 ## Gerando a Imagem
 
-docker file esta:
+Dockerfile esta:
 ```
 FROM node:14-alpine AS build
 WORKDIR /app
