@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+O Dockerfile nada mais é do que um arquivo de configuração usado pelo Docker com a descrição passo a passo do que você deseja que aconteça.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Criando e rodando uma aplicação React com Dockerfile**
 
-## Available Scripts
+1. `npx create-react-app react-dockerized`
 
-In the project directory, you can run:
+2. `cd react-dockerized`
 
-### `npm start`
+3. `touch Dockerfile`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**FROM:** Ao criarmos uma nova imagem, sempre devemos baseá-la em uma outra, para isso utilizamos o FROM. Por exemplo, para criar uma nova imagem que rodará sob um ubuntu: `FROM ubuntu:latest`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+É recomendado utilizar sempre uma versão específica de nossa imagem base em nossas imagens de produção, por exemplo `ubuntu:8` ao invés de `ubuntu:latest`
 
-### `npm test`
+**WORKDIR:** Definir um "diretório de trabalho", que será utilizado como base para a execução dos comandos. ==> `WORKDIR <DIRETORIO UTILIZADO>`. **Exermplo:** `WORKDIR /app`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**COPY:** Vimos que conseguimos preparar nossa imagem para executar por exemplo, uma aplicação dentro do container, porém, precisamos do código fonte para rodá-lo. Para isso utilizamos o COPY (Copiar em português) , com ele conseguimos copiar diretórios e arquivos para dentro da nossa imagem:
+```
+COPY ["<ARQUIVO_1>","<ARQUIVO_2>",...,"<ARQUIVO_X>", "<PASTA-DESTINO>"]
+```
+Imagine que estamos em um diretório que possui uma pasta app com o código fonte de uma aplicação, para copiá-la para dentro da imagem e conseguirmos executá-la, basta aplicar:
+```
+COPY ["./app", "/usr/src/app"]
+```
+Com o comando COPY conseguimos montar nossa estrutura do código fonte dentro da imagem, porém, para executá-la precisaríamos apontar para o diretório que definimos anteriormente como nosso diretório de trabalho (WORKDIR).
+```
+# FROM node:14-alpine AS build
+# WORKDIR /app
+COPY package*.json ./
+```
 
-### `npm run build`
+**RUN:** Executa uma lista de comandos durante a criação da imagem
+```
+RUN ["<COMANDO>", "<SUBCOMANDO>", "<PARAMETRO-1>", ... , "<PARAMETRO-N>"]
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+No caso do `RUN npm install`. É interessante criarmos um arquivo chamado dockerignore para adicionarmos lá a node_modules, de modo que ela não seja copiada. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**EXPOSE:** Indica a porta que será utilizada dentro do nosso container
+```
+EXPOSE <PORTA-DO-APP-NO-CONTAINER>
+```
+```
+EXPOSE 3000
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**CMD:** Sempre é executado quando o container é iniciado
 
-### `npm run eject`
+O primeiro argumento é o executável e os demais são seus parâmetros:
+```
+CMD ["/bin/echo", "Hello World"]
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**ENTRYPOINT:**  Vimos que podemos utilizar o CMD para iniciarmos um comando ao executarmos nossos containers , como por exemplo para iniciarmos um app .
+Porém, para esse fim recomendamos utilizar ENTRYPOINT (Ponto de entrada em português) , pois, diferentemente do CMD , o comando não será sobrescrito pelo passado no run ao executarmos o container . 
+```
+ENTRYPOINT [ "/bin/echo" ]
+CMD [ "Hello World" ]
+```
