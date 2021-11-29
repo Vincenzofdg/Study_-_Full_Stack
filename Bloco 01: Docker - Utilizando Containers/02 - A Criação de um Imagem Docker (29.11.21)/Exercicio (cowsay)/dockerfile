@@ -1,0 +1,9 @@
+# https://hub.docker.com/r/chuanwen/cowsay (Tags)
+FROM chuanwen/cowsay:latest
+# https://hub.docker.com/r/mbentley/cowsay/dockerfile
+ENTRYPOINT [ "/usr/games/cowsay" ]
+CMD ["moby","dock"]
+
+# Para buildar: docker image build .
+# Para buildar com titulo: docker image build . -t cowsay
+
