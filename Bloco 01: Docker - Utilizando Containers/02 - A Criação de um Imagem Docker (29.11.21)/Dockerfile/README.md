@@ -36,3 +36,24 @@ RUN ["<COMANDO>", "<SUBCOMANDO>", "<PARAMETRO-1>", ... , "<PARAMETRO-N>"]
 
 No caso do `RUN npm install`. É interessante criarmos um arquivo chamado dockerignore para adicionarmos lá a node_modules, de modo que ela não seja copiada. 
 
+**EXPOSE:** Indica a porta que será utilizada dentro do nosso container
+```
+EXPOSE <PORTA-DO-APP-NO-CONTAINER>
+```
+```
+EXPOSE 3000
+```
+
+**CMD:** Sempre é executado quando o container é iniciado
+
+O primeiro argumento é o executável e os demais são seus parâmetros:
+```
+CMD ["/bin/echo", "Hello World"]
+```
+
+**ENTRYPOINT:**  Vimos que podemos utilizar o CMD para iniciarmos um comando ao executarmos nossos containers , como por exemplo para iniciarmos um app .
+Porém, para esse fim recomendamos utilizar ENTRYPOINT (Ponto de entrada em português) , pois, diferentemente do CMD , o comando não será sobrescrito pelo passado no run ao executarmos o container . 
+```
+ENTRYPOINT [ "/bin/echo" ]
+CMD [ "Hello World" ]
+```
