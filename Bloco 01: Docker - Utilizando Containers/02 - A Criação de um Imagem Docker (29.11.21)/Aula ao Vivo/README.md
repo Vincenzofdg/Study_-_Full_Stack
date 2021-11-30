@@ -31,6 +31,26 @@ Conteudo `index.html`:
 </html>
 ``` 
 
+**Para entrar no terminal do NGINX**
+
 > docker container run -it nginx bash 
 
+**Onde o NGINX coloca os arquivos:**
 
+> ls -a /usr/share/nginx/
+
+**Ver a configuração do NGINX**
+
+> cat /etc/nginx/conf.d/default.conf
+
+> exit
+
+**paremetro `-t` para dar um nome à imagem**
+
+> docker build -t hello-nginx . 
+
+**Criar um container e rodar:**
+
+> docker container run -d <Nome_da_Imagem> 
+
+32
