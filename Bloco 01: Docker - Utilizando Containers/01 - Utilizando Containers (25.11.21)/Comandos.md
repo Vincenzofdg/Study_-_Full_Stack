@@ -49,3 +49,15 @@
 ## Monitorando os processos dentro de um container
 
 `docker container top <CONTAINER ID || NAMES>`
+
+## Removendo:
+
+**Contêineres:** `docker container rm $(docker container ls -a -q)`
+     
+**Imagens:** `docker image rm $(docker image ls -a -q)`
+     
+**Volumes:** `docker volume rm $(docker volume ls -q)`
+     
+**Networks:** `docker network rm $(docker network ls -q)`
+
+
