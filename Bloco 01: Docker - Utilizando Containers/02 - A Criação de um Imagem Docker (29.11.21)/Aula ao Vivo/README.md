@@ -6,3 +6,31 @@
 
 > docker ps
 
+> docker container stop <ID_Container>
+
+> docker container rm <ID_Container>
+
+> touch index.html Dockerfile
+
+Conteudo `index.html`:
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to nginx!</title>
+    <style>
+      html { color-scheme: light dark; }
+      body { width: 35em; margin: 0 auto;
+      font-family: Tahoma, Verdana, Arial, sans-serif; }
+    
+</style>
+  </head>
+<body>
+  <h1>Hello Docker!</h1>
+  </body>
+</html>
+``` 
+
+> docker container run -it nginx bash 
+
+
