@@ -55,12 +55,39 @@ services:
 ```
 <hr />
 
+**Restart:** No Docker, existem as políticas de reinicialização, que servem para gerenciar se seus containers reiniciarão automaticamente quando o docker for reiniciado ou quando ocorrer algum erro, por exemplo.
 
+`no`: Este é o valor padrão assumido pelo Docker e define que o container não irá restartar automaticamente;
 
-**Restart:**
+`on-failure`: Define que o container será reiniciado caso ocorra alguma falha (apontado pelo exit code diferente de zero);
+
+`always`: Especifica que sempre que o serviço parar, seja por um falha ou porque ele finalizou sua execução, ele irá ser reiniciado;
+
+`unless-stopped`: Define que o container sempre seja reiniciado, a menos que o Docker em si seja parado (manualmente ou não). No caso de ser interrompido, ele não reinicia nem depois que o daemon do Docker seja reiniciado.
+```
+version: '3'
+services:
+  frontend:
+    image: mjgargani/compose-example:frontend-trybe1.0
+    restart: always
+  backend:
+    image: mjgargani/compose-example:backend-trybe1.0
+    restart: always
+  database:
+    image: mjgargani/compose-example:database-trybe1.0
+    restart: always
+```
+<hr />
 
 **Ports:**
 
+
+
+<hr />
+
 **Environment:**
+
+
+<hr />
 
 **Depends On:**
