@@ -25,5 +25,36 @@ Queremos desenvolver nossa página HTML de forma que ela rode dentro do servidor
 ```
 docker run -d --name <Nome_Container> -p 8881:80 -v "/home/$USER/site-exemplo/:/usr/local/apache2/htdocs/" httpd:2.4
 ```
-**-v (volume) ==> `-v <PASTA-LOCAL>:<PASTA-CONTAINER>`**
+> -v (volume) ==> `-v <PASTA-LOCAL>:<PASTA-CONTAINER>`
 
+**Verificando se o volume realmente foi mantido**
+
+> `docker inspect <Nome_Container>`
+
+**Resultado:**
+```
+"Mounts": [
+   {
+      "Type": "bind",
+      "Source": "/home/trybe/meu-site",
+      "Destination": "/usr/local/apache2/htdocs",
+      "Mode": "",
+      "RW": true,
+      "Propagation": "rprivate"
+   }
+]
+```
+
+**Volume no Dockerfile:** `VOLUME ["/data"]`
+
+**Limpar os Volumes do nosso sistema:**
+
+> docker volume ls
+
+> docker volume rm <Nome_Volume>
+
+ou 
+
+> docker volume prune
+
+**Removendo Containers juntamente ao Volume:** `docker container rm -v <Container_ID>`
