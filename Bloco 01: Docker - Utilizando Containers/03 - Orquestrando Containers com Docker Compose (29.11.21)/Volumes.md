@@ -23,7 +23,7 @@ Queremos desenvolver nossa página HTML de forma que ela rode dentro do servidor
 ```
 2. Criar o container vinculando a pagina criada:
 ```
-docker run -d --name site-trybe2 -p 8881:80 -v "/home/$USER/site-exemplo/:/usr/local/apache2/htdocs/" httpd:2.4
+docker run -d --name <Nome_Container> -p 8881:80 -v "/home/$USER/site-exemplo/:/usr/local/apache2/htdocs/" httpd:2.4
 ```
 **-v (volume) ==> `-v <PASTA-LOCAL>:<PASTA-CONTAINER>`**
 
