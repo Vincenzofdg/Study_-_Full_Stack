@@ -86,6 +86,28 @@ services:
 version: '3'
 services:
   frontend:
+    image: mjgargani/compose-example:frontend-1.0
+    restart: always
+    ports:
+      - 3000:3000
+  backend:
+    image: mjgargani/compose-example:backend-1.0
+    restart: always
+    ports:
+      - 3001:3001
+  database:
+    image: mjgargani/compose-example:database-1.0
+    restart: always
+```
+
+<hr />
+
+**Environment:** Outro parâmetro importante é o environment. Com ele, conseguimos configurar as variáveis de ambiente de nossos containers.
+Imagine que em nosso exemplo, precisamos passar para nosso back-end uma parte da URL onde o banco de dados irá rodar, em uma variável chamada DB_HOST. Nosso exemplo ficaria assim
+```
+version: '3'
+services:
+  frontend:
     image: mjgargani/compose-example:frontend-trybe1.0
     restart: always
     ports:
@@ -95,6 +117,8 @@ services:
     restart: always
     ports:
       - 3001:3001
+    environment:
+      - DB_HOST=database
   database:
     image: mjgargani/compose-example:database-trybe1.0
     restart: always
@@ -102,9 +126,27 @@ services:
 
 <hr />
 
-**Environment:**
-
-
-<hr />
-
-**Depends On:**
+**Depends On:** Conseguimos estabelecer dependências entre os serviços.
+```
+version: "3.8"
+services:
+  frontend:
+    image: mjgargani/compose-example:frontend-trybe1.0
+    restart: always
+    ports:
+      - 3000:3000
+    depends_on:
+      - "backend"
+  backend:
+    image: mjgargani/compose-example:backend-trybe1.0
+    restart: always
+    ports:
+      - 3001:3001
+    environment:
+      - DB_HOST=database
+    depends_on:
+      - "database"
+  database:
+    image: mjgargani/compose-example:database-trybe1.0
+    restart: always
+```
