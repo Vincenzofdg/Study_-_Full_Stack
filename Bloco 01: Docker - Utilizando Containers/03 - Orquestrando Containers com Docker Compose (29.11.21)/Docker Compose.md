@@ -28,7 +28,9 @@ services:
     # ... outras configurações
 ```
 <hr />
-**Version** Todo arquivo docker-compose.yaml deve iniciar com a tag version. Evita que fique incompatível com versões mais recentes do compose (ex: `version: 3`).
+
+**Version:** Todo arquivo docker-compose.yaml deve iniciar com a tag version. Evita que fique incompatível com versões mais recentes do compose (ex: `version: 3`).
+
 <hr />
 
 **Services:** Para o Compose, há o conceito de services, que são os "tipos" dos containers que iremos rodar. Por exemplo, se vamos executar uma API, dizemos que ela é um service. Isso porque com o Compose, podemos escalar nossos apps em vários containers.
