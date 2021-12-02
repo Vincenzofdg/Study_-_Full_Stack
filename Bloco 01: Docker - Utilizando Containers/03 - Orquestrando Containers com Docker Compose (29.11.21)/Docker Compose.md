@@ -81,9 +81,24 @@ services:
 ```
 <hr />
 
-**Ports:**
-
-
+**Ports:** Se comporta da mesma maneira que o `-p` do docker container run.
+```
+version: '3'
+services:
+  frontend:
+    image: mjgargani/compose-example:frontend-trybe1.0
+    restart: always
+    ports:
+      - 3000:3000
+  backend:
+    image: mjgargani/compose-example:backend-trybe1.0
+    restart: always
+    ports:
+      - 3001:3001
+  database:
+    image: mjgargani/compose-example:database-trybe1.0
+    restart: always
+```
 
 <hr />
 
