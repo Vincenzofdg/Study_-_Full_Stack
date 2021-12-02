@@ -1,0 +1,2 @@
+docker image build -t todobackend ./todo-app/back-end/
+
