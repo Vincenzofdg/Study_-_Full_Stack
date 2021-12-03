@@ -150,3 +150,69 @@ services:
     image: mjgargani/compose-example:database-trybe1.0
     restart: always
 ```
+
+<hr />
+
+**Volumes:** Podemos definir nossos volumes da mesma maneira que fazemos com o comando docker container run, tanto como bind como da forma nomeada.
+Podemos utilizar a forma mais extensa dele também, por exemplo:
+```
+version: "3.8"
+services:
+  web:
+    image: nginx:alpine
+    volumes:
+      - type: volume
+        source: mydata
+        target: /data
+        volume:
+          nocopy: true
+      - type: bind
+        source: ./static
+        target: /opt/app/static
+
+  db:
+    image: postgres:latest
+    volumes:
+      - "/var/run/postgres/postgres.sock:/var/run/postgres/postgres.sock"
+      - "dbdata:/var/lib/postgresql/data"
+
+volumes:
+  mydata:
+  dbdata:
+```
+
+<hr />
+
+**Networks:** Utilizando o Docker Compose , isso já é realizado de maneira padrão.
+Porém, ainda podemos criar nossas próprias redes customizadas, caso faça sentido para nossa arquitetura, por exemplo, quando queremos isolar os serviços.
+Temos um ambiente com 3 services, sendo um front-end e dois back-ends, mais um banco de dados. Nessa arquitetura, apenas os back-ends acessam o banco de dados e o front-end acessa os back-ends. Para criarmos esses isolamentos, nosso YAML ficaria semelhante ao exemplo abaixo:
+```
+version: '3'
+
+services:
+  frontend-a:
+    build: ./frontend_a
+    networks:
+      - frontend
+
+  backend-a:
+    build: ./backend_a
+    networks:
+      - backend
+      - frontend
+
+  backend-b:
+    build: ./backend_b
+    networks:
+      - backend
+      - frontend
+
+  db:
+    image: mysql
+    networks:
+      - backend
+
+networks:
+  frontend:
+  backend:
+```
