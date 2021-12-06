@@ -57,4 +57,12 @@ As constraints mais usadas são:
   será necessario rodar `sudo systemctl start mysql` toda a vez que iniciar o sistema
   
   > **Para iniciar junto ao sistema** `sudo systemctl enable mysql`
+  
+## Instalando `MySQL Workbench`
+
+01. Acesse este [link](https://dev.mysql.com/downloads/workbench/)
+
+02. Baixe o arquivo .deb e o instale
+
+03. 
 
