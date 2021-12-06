@@ -43,3 +43,34 @@ As constraints mais usadas são:
 5. Reinicie os privilégios `FLUSH PRIVILEGES;`
 
 6. Testando. Rode o comando `mysql -u 'Um_nome_de_usuario' -p` e digite a senha `Uma_senha`
+
+7. Verificando o status da instalação: `sudo systemctl status mysql`.
+
+  > **Para iniciar:** systemctl start mysql
+  
+  > **Para parar:** systemctl stop mysql
+  
+8. Configurando a inicialização:
+
+  > **Para não iniciar junto ao sistema** `sudo systemctl disable mysql`
+  
+  será necessario rodar `sudo systemctl start mysql` toda a vez que iniciar o sistema
+  
+  > **Para iniciar junto ao sistema** `sudo systemctl enable mysql`
+
+9. Configurando senha do servidor MYSQL:
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
