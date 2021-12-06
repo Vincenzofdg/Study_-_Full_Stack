@@ -64,5 +64,3 @@ As constraints mais usadas são:
 
 02. Baixe o arquivo .deb e o instale
 
-03. 
-
