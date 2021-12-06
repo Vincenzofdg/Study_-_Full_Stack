@@ -11,3 +11,5 @@ Todas as pesquisas realizadas dentro de um banco de dados são feitas em tabelas
 <center>
 	![image](tabela.png)
 </center>
+
+<span style="display:block;text-align:center">![image](tabela.png)</span>
