@@ -58,19 +58,3 @@ As constraints mais usadas são:
   
   > **Para iniciar junto ao sistema** `sudo systemctl enable mysql`
 
-9. Configurando senha do servidor MYSQL:
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
