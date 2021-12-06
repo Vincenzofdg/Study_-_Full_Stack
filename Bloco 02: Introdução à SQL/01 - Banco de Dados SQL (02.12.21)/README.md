@@ -8,4 +8,6 @@
 
 Todas as pesquisas realizadas dentro de um banco de dados são feitas em tabelas. Tabelas possuem linhas e colunas.
 
-![image](tabela.png)
+<center>
+	![image](tabela.png)
+</center>
