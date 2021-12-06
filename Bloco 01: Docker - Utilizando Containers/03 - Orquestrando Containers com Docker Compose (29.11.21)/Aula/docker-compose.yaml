@@ -1,0 +1,25 @@
+version: '3'
+
+services: 
+  web:
+    # esta imagem pois suporta o mysql-client (apt get install mysql-client)
+    # Para nao ter que sempre entrar no container e instalar o mysql... iremos criar um dockerfile
+    
+    build: . # Pegando o Dockerfile para construir a imagem.
+             # rodar docker-compose build
+             # e entao docker-compose up -d
+    volumes: 
+      - ./public_html:/usr/share/nginx/html
+    ports:
+      - 8080:80
+    depends_on:
+      - db
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - 33060:3306
+    volumes:
+      - ./db:/var/lib/mysql
