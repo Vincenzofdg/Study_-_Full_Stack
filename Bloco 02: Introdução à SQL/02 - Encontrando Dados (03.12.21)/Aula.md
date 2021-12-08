@@ -25,6 +25,6 @@ SELECT COUNT(first_name) FROM sakila.actor
 
 **ORDERBY:** Define uma ordem por meio de um criterio
 ```
-SELECT COUNT(*) FROM sakila.actor order ny first_name DESC, last_name ASC; (a segunda coluna é criterio de desempate)
+SELECT COUNT(*) FROM sakila.actor ORDER BY first_name DESC, last_name ASC; (a segunda coluna é criterio de desempate)
 ```
 

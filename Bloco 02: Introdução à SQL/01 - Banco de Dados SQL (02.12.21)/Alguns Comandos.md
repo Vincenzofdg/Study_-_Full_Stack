@@ -4,8 +4,6 @@ Por convenção, utilizamos as palavras chave do SQL em caixa alta para diferenc
 
 **Tabelas inicializadas no seu server:** `SHOW TABLES;`
 
-**Tabelas inicializadas no seu server:** `SHOW TABLES;`
-
 **Criar um banco de dados:** `CREATE DATABASE nome_do_banco_de_dados;`
 
 **Remover um banco de dados:** `DROP DATABASE nome_do_banco_de_dados;`
