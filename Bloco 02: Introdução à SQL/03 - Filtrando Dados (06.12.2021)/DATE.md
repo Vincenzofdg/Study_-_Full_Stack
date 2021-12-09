@@ -35,19 +35,19 @@ WHERE payment_date BETWEEN '2005-05-26 00:00:00' AND '2005-05-27 23:59:59';
 
 ### Selecionando apenas partes de uma data
 
-`SELECT DATE(payment_date) FROM sakila.payment;` YYYY-MM-DD
+`SELECT DATE(payment_date) FROM sakila.payment;` 		YYYY-MM-DD
 
-`SELECT YEAR(payment_date) FROM sakila.payment;` Ano
+`SELECT YEAR(payment_date) FROM sakila.payment;` 		Ano
 
-`SELECT MONTH(payment_date) FROM sakila.payment;` Mês
+`SELECT MONTH(payment_date) FROM sakila.payment;` 		Mês
 
-`SELECT DAY(payment_date) FROM sakila.payment;` Dia
+`SELECT DAY(payment_date) FROM sakila.payment;` 		Dia
 
-`SELECT HOUR(payment_date) FROM sakila.payment;` Hora
+`SELECT HOUR(payment_date) FROM sakila.payment;` 		Hora
 
-`SELECT MINUTE(payment_date) FROM sakila.payment;` Minuto
+`SELECT MINUTE(payment_date) FROM sakila.payment;` 		Minuto
 
-`SELECT SECOND(payment_date) FROM sakila.payment;` Segundo
+`SELECT SECOND(payment_date) FROM sakila.payment;` 		Segundo
 
 **Exercícios:**
 
