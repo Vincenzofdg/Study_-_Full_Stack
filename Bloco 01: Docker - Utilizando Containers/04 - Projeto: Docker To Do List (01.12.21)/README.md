@@ -1,5 +1,3 @@
-## Comandos docker
-
 #### 1. Crie um novo container de modo interativo sem roda-lo nomeando-o como `01container` e utilizando a imagem `alpine` usando a versão `3.12`
 
   - **Observações técnicas:** 
@@ -67,10 +65,6 @@
   - **O que será testado:** 
     - Que não há nenhum container ativo após seu comando.
 
-## Dockerfile
-
-**⚠️ As aplicações a seguir contam com um [**README.md**](./docker/todo-app/README.md) próprio, que deve ser usado como referência na criação dos scripts!**
-
 #### 9. Gere uma build a partir do Dockerfile do `back-end` do `todo-app` nomeando a imagem para `todobackend`.
 
   **Dica:** O comando `ADD` do Dockerfile, também pode ser utilizado para descompactar arquivos dentro do container.
@@ -114,10 +108,6 @@
         - Deve copiar todos os arquivos da pasta `tests` para a imagem;
         - Ao iniciar a imagem deve rodar o comando `npm test`;
       - Se ao *buildar* o Dockerfile o nome da imagem gerada é igual a `todotests`.
-
-## Bônus
-
-### Docker-compose
 
 #### 12. Suba uma orquestração em segundo plano com o docker-compose de forma que `backend`, `frontend` e `tests` consigam se comunicar.
 
