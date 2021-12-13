@@ -8,3 +8,12 @@
 
 **04. Projeto: Docker Todo-List**
 
+## Bloco 02: Introdução à SQL
+
+**01. Banco de Dados SQL**
+
+**02. Encontrando Dados**
+
+**03.**
+
+**04. Projeto: All For One**
