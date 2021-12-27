@@ -12,5 +12,5 @@ Turma: 14 A.
 
 **03. Desenvolvimento Back-end**
 
-**05. Ciência da Computação**
+**04. Ciência da Computação**
 
