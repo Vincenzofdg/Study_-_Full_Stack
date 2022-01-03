@@ -14,6 +14,18 @@
 
 **02. Encontrando Dados**
 
-**03.**
+**03. Filtrando Dados**
 
-**04. Projeto: All For One**
+**04. Manipulando Tabelas**
+
+**05. Projeto: All For One**
+
+## Bloco 03: Funções SQL, JOINs E Normalização
+
+**01. Funções Mais Usadas no SQL**
+
+**02. Descomplicando JOINs**
+
+**03. Transformando Ideias em um Modelo de Banco de Dados**
+
+**04. Projeto:**
