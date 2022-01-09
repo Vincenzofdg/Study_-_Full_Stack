@@ -1,6 +1,6 @@
 **Primeira Forma Normal:**
 
-- Cada coiluna possui um nome único;
+- Cada coluna possui um nome único;
 
 - Cada coluna usa o mesmo tipo de dado;
 
