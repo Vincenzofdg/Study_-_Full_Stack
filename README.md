@@ -29,3 +29,11 @@
 **03. Transformando Ideias em um Modelo de Banco de Dados**
 
 **04. Projeto:**
+
+## Bloco 04: Introdução ao desenvolvimento Web com Node.js
+
+**01. Introdução ao NodeJS**
+
+**02. Fluxo Assíncrono**
+
+**03. Mocha, Chai e Sinon: Testes de com Node.js**
