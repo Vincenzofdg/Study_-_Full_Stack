@@ -38,7 +38,7 @@ As constraints mais usadas são:
   
   > CREATE USER 'Um_nome_de_usuario'@'localhost' IDENTIFIED BY 'Uma_senha';
   
-  > GRANT ALL PRIVILEGES ON *.* TO 'Um_nome_de_usuario'@'localhost';
+  > GRANT ALL PRIVILEGES ON *.* TO 'Um_nome_de_usuario'@'localhost'; (copiar comando fora do markdown)
 
 5. Reinicie os privilégios `FLUSH PRIVILEGES;`
 
