@@ -12,3 +12,7 @@ readFile(nomeDoArquivo, 'utf8', (err, data) => {
 });
 
 // readFile('Nome do Arquivo', '[OPCIONAL] encoding para leitura do arquivo', 'Callback para manipular os dados')
+
+// callback recebe dois parâmetros:
+//   1º err;
+//   2º data
