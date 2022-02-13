@@ -6,7 +6,7 @@
 
 const exercicio01 = (num1, num2, num3) => {
   return new Promise((resolve, reject) => {
-    if(typeoa num1 !== "number" || typeoa num2 !== "number" || typeoa num3 !== "number") console.log("Informe apenas números");
+    if(typeof num1 !== "number" || typeof num2 !== "number" || typeof num3 !== "number") console.log("Informe apenas números");
     else ((num1 + num2) * num3) > 50 ? resolve(((num1 + num2) * num3) > 50) : reject("Valor muito baixo");
   }) 
 };
