@@ -6,6 +6,10 @@ Para implementar testes no back-end iremos utilizar a dupla mocha e chai . Apesa
 ```
 npm install -D mocha chai
 ```
+ou
+```
+npm install --save-dev mocha chai
+```
 
 ## Tipos de Teste:
 
