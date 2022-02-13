@@ -12,3 +12,18 @@ npm install -D mocha chai
 1. **Unitários:** Trabalham presumindo um escopo limitado a um pequeno fragmento do seu código com interação mínima entre recursos externos;
 2. **Integração:** Trabalham presumindo a junção de múltiplos escopos com interações entre eles;
 3. **Ponta-a-ponta:** Chamados também de Fim-a-fim (End-to-End; E2E), esses testes pressupõe um fluxo de interação completo com a aplicação, de uma ponta a outra.
+
+## Executando o Teste:
+
+**Instalado de maneira global:** `npm install -g mocha`
+
+**Chamando diretamente no terminal:** `mocha tests/arquivo.js`
+
+**Forma mais recomendável:**
+1. Adicionando ao package.json
+```
+"scripts": {
+  "start": "node index.js",
+  "test": "mocha tests"
+```
+2. Executar apenas `npm run test` ou `npm test`
