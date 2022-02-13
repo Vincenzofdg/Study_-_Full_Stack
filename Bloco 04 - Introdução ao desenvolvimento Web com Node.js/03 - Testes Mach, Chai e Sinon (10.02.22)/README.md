@@ -1,3 +1,13 @@
-o Node.js surgiu do V8, que é a ferramenta do Google Chrome responsável por ler e executar as instruções que escrevemos em JavaScript, processo comumente chamado de interpretar o código. Ao software responsável por interpretar o código dá-se o nome de interpretador, engine e, por vezes, de runtime. Por isso, é comum dizer que o Node.js é um runtime JavaScript.
+Para implementar testes no back-end iremos utilizar a dupla mocha e chai . Apesar de serem duas ferramentas diferentes, elas se completam.
 
-Apesar de ser baseado no V8, o Node.js possui algumas diferenças em relação ao interpretador que funciona nos navegadores. Dentre elas, as principais são a ausência de métodos para manipulação de páginas web e a presença de métodos que permitem acessar o sistema de arquivos e a rede mais diretamente.
+
+**-D: Esses módulos só serão utilizados em fase de desenvolvimento e não serão utilizados para executar nossa aplicação quando ela for publicada.**
+```
+npm install -D mocha chai
+```
+
+## Tipos de Teste:
+
+1. **Unitários:** Trabalham presumindo um escopo limitado a um pequeno fragmento do seu código com interação mínima entre recursos externos;
+2. **Integração:** Trabalham presumindo a junção de múltiplos escopos com interações entre eles;
+3. **Ponta-a-ponta:** Chamados também de Fim-a-fim (End-to-End; E2E), esses testes pressupõe um fluxo de interação completo com a aplicação, de uma ponta a outra.
