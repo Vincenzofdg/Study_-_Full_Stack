@@ -4,3 +4,13 @@
 //   - Caso o resultado seja menor que 50, rejeite a Promise com o motivo "Valor muito baixo";
 //   - Caso o resultado seja maior que 50, resolva a Promise com o valor obtido.
 
+const exercicio01 = (num1, num2, num3) => {
+  return new Promise((resolve, reject) => {
+    if(typeoa num1 !== "number" || typeoa num2 !== "number" || typeoa num3 !== "number") console.log("Informe apenas números");
+    else ((num1 + num2) * num3) > 50 ? resolve(((num1 + num2) * num3) > 50) : reject("Valor muito baixo");
+  }) 
+};
+
+exercicio01(10, 10, 10)
+  .then(resolve => console.log(resolve))
+  .catch(error => console.log(error))
