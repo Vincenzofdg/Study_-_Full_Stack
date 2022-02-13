@@ -47,3 +47,5 @@ const exercicio03 = async () => {
     console.log(err.message)
   }
 };
+
+// 04. 
