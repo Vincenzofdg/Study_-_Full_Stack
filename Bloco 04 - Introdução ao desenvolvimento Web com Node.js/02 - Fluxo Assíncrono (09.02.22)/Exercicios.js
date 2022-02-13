@@ -35,3 +35,15 @@ const exercicio02 = () => {
     .catch(error => console.log(error.message));
 };
 
+// 03. Reescreva o código do exercício anterior para que utilize async/await.
+
+const exercicio03 = async () => {
+  const numbers = Array.from({ length: 3 }).map(randomNumbers);
+  
+  try {
+    const myResult = await exercicio01(..numbers);
+    console.log(myResult);
+  } catch (err) {
+    console.log(err.message)
+  }
+};
