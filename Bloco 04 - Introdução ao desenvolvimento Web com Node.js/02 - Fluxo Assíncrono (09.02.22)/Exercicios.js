@@ -133,3 +133,73 @@ filtrar04()
 //   - Utilize o Promise.all para manipular vários arquivos ao mesmo tempo;
 //   - Dado o seguinte array de strings: ['Finalmente', 'estou', 'usando', 'Promise.all', '!!!'] Faça com que sua função crie um arquivo contendo cada string, sendo o nome de cada arquivo igual a file<index + 1>.txt. Por exemplo, para a string "Finalmente", o nome do arquivo é file1.txt.
 //   - Programe sua função para que ela faça a leitura de todos os arquivos criados no item anterior, armazene essa informação e escreva em um arquivo chamado fileAll.txt.
+
+const { writeFile, readFile } = require('fs').promises;
+
+const arrayToFile = async () => {
+  // Criando os Arrays:
+  const arrayStr = ['Finalmente', 'estou', 'usando', 'Promise.all', '!!!'];
+  const arrayFiles = Array.from({ length: arrayStr.length }, (_elem, i) => `file${++i}.txt`);
+
+  // Funções:
+  const fileName = arrayStr.map((string, index) => writeFile(`./file${++index}.txt`, string));
+  const fileRead = () => arrayFiles.map((fileName) => readFile(fileName, 'utf-8'));
+
+  // Eventos
+  await Promise.all(fileName);
+  const conteudo = await Promise.all(fileRead());
+  const conteudoNovo = conteudo.join(' ');
+  await writeFile('./fileAll.txt', conteudoNovo);
+}
+
+arrayToFile();
+
+// 06. Crie um script que mostre na tela o conteúdo de um arquivo escolhido pelo usuário:
+//   - Pergunte à pessoa usuária qual arquivo ela deseja ler;
+//   - Leia o arquivo indicado;
+//   - Caso o arquivo não exista, exiba na tela "Arquivo inexistente" e encerre a execução do script;
+//   - Caso o arquivo exista, escreva seu conteúdo na tela.
+
+const fs = require('fs').promises;
+const readline = require('readline');
+
+function question(message) {
+  // Realizamos o uso do readline conforme mostrado na documentação.
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  return new Promise((resolve) => {
+    // No entanto, ao abrirmos a pergunta,
+    // fazemos isso dentro de uma Promise.
+    rl.question(message, (answer) => {
+      rl.close();
+
+      // Dessa forma, quando obtivermos a resposta,
+      // podemos resolver nossa Promise com essa resposta.
+      // Assim, quem chama nossa função não precisa
+      // se preocupar com callbacks, e pode obter a resposta
+      // através da Promise que retornamos.
+      resolve(answer);
+    });
+  });
+}
+
+async function start() {
+  // Como nossa função `question` retorna uma Promise,
+  // podemos utilzar `await` para obter a resposta.
+  const fileName = await question('Digite o caminho do arquivo que deseja ler: ');
+
+  try {
+    // Tentamos realizar a leitura do arquivo
+    const fileContent = await readFile(fileName, 'utf-8');
+    // E exibir seu resultado na tela
+    console.log(fileContent);
+  } catch (err) {
+    // Caso um erro aconteça, exibimos a mensagem de erro na tela.
+    console.log('Arquivo inexistente');
+  }
+}
+
+start();
