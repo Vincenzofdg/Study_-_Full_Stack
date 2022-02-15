@@ -1,39 +1,16 @@
-## Bloco 01: Docker - Utilizando Containers
+**[Trybe - Escola de Programação](https://www.betrybe.com/)**
 
-**01. Utilizando Containers com Docker**
+Curso realizado em: 2021 - 2022.
 
-**02. Manipulação e Criação de Imagens no Docker**
+Turma: 14 A.
 
-**03. Orquestrando Containers com Docker Compose**
+### Curso de duração de 1 ano. Dividido em 4 grandes blocos, sendo eles:
 
-**04. Projeto: Docker Todo-List**
+**01. Fundamentos do Desenvolvimento Web;**
 
-## Bloco 02: Introdução à SQL
+**02. Desenvolvimento Front-end**
 
-**01. Banco de Dados SQL**
+**03. Desenvolvimento Back-end**
 
-**02. Encontrando Dados**
+**04. Ciência da Computação**
 
-**03. Filtrando Dados**
-
-**04. Manipulando Tabelas**
-
-**05. Projeto: All For One**
-
-## Bloco 03: Funções SQL, JOINs E Normalização
-
-**01. Funções Mais Usadas no SQL**
-
-**02. Descomplicando JOINs**
-
-**03. Transformando Ideias em um Modelo de Banco de Dados**
-
-**04. Projeto:**
-
-## Bloco 04: Introdução ao desenvolvimento Web com Node.js
-
-**01. Introdução ao NodeJS**
-
-**02. Fluxo Assíncrono**
-
-**03. Mocha, Chai e Sinon: Testes de com Node.js**
