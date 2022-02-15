@@ -1,5 +1,3 @@
-**[Trybe - Escola de Programação](https://www.betrybe.com/)**
-
 Curso realizado em: 2021 - 2022.
 
 Turma: 14 A.
