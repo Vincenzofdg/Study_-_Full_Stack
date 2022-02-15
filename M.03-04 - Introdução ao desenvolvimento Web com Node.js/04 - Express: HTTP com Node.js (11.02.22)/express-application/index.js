@@ -10,8 +10,8 @@ app.get('/hello', myRequest);
 app.listen(3001, () => console.log('Aplicação ouvindo na porta 3001')); 
 
 // 04. Ao tratar a requisição GET enviar status HTTP 200 (ok) e a mensagem
-function myRequest(req, res) {
-  res.status(200).send('Hello World!'); // 4
+function myRequest(_req, res) {
+  res.status(200).send('Hello World!');
 }
 
 // Obs: arrow function não funcionou
