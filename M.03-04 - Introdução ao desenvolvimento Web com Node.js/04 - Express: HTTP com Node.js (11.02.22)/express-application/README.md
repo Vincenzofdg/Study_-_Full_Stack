@@ -15,3 +15,7 @@ scripts: {
   "dev": "nodemon index.js"
 }
 ```
+Assim para rodar a aplicação utilizaremos:
+```
+npm run dev
+```
