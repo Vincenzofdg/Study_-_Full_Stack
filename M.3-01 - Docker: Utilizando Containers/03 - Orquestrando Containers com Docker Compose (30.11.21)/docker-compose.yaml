@@ -1,0 +1,34 @@
+# Primeiro passo => Vers'ao utilizada do Docker Composer
+version: '3'
+# Criar os services (Neste exemplo sera usado o MYSQL e Wordpress)
+services:
+	db:
+		images: mysql:5.7
+		volumes:
+			# Minha pasta db_data ==> /var/lib/mysql
+			- db_data:/var/lib/mysql
+			# Caso ocorra algum erro
+		restart: always
+		# Variaveis de ambiente com as informações de login e senha
+		environment:
+			# Parametros que o proprio MYSQL pede para preenchermos
+			MYSQL_ROOT_PASSWORD: wordpress
+			MYSQL_DATABASE: wordpress
+			MYSQL_PASSWORD: wordpress
+		
+	wordpress:
+		# O wordpress depende do serviço db
+		depends_on:
+			- db
+		image: wordpress:latest
+		# Realizando o bind de portas
+		ports:
+			- "8000:80"
+		restart: always
+		# Dizer quem é meu banco de dados, login e senha 
+		environment:
+			# db:3306 ==> banco de dados : porta  padrão do MYSQL
+			WORDPRESS_DB_HOST: db:3306
+			WORDPRESS_DB_USER: wordpress
+			WORDPRESS_DB_PASSWORD: wordpress
+
