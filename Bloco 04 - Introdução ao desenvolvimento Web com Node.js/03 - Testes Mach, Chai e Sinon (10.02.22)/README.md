@@ -1,4 +1,5 @@
-[Documentação do Chai](https://www.chaijs.com/api/bdd/)
+ - [Documentação do Chai](https://www.chaijs.com/api/bdd/)
+ - [Documentação do Sinon](https://sinonjs.org)
 
 Para implementar testes no back-end iremos utilizar a dupla mocha e chai . Apesar de serem duas ferramentas diferentes, elas se completam.
 
@@ -9,6 +10,15 @@ npm install -D mocha chai
 ou
 ```
 npm install --save-dev mocha chai
+```
+
+**Instalação Sinon:**
+```
+npm install -D sinon
+```
+ou
+```
+npm install --save-dev sinon
 ```
 
 ## Tipos de Teste:
