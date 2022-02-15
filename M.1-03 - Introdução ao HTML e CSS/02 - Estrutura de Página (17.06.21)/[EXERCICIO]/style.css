@@ -1,0 +1,29 @@
+body {
+    font-size: 16px;
+}
+h1 {
+    font-size: 35px;
+    color: orange;
+    font-family: sans-serif;
+}
+p {
+    font-weight: 600;
+    font-size: 3em;
+}
+ul {
+    background-color: teal;
+}
+.part01 {
+    background-color: violet;
+    text-align: center;
+    line-height: 30px;
+}
+#a {
+    background-color: yellow;
+}
+#v {
+    background-color: red;
+}
+#m {
+    background-color: brown;
+}

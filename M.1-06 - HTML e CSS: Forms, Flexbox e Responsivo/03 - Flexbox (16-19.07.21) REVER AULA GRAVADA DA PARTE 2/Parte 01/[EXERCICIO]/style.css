@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu';
+}
+
+.header-img {
+  width: 70px;
+}
+
+.gallery-img {
+  width: 150px;
+}
+
+.social-img {
+  width: 40px;
+  margin-left: 10px;
+}
+
+/* ---------------------------- */
+
+.exercicio-01 {
+  background-color: #323433;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1 {
+  color: rgb(238, 238, 238);
+}
+
+h3 {
+  color: rgb(194, 194, 194);
+}
+
+ /*Pseudo seletor para quando passar o mouse mude a cor*/
+h3:hover {
+  color: #0fa36b;
+  font-size: larger;
+}
+
+/* ---------------------------- */
+
+.exercicio-02 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  width: 100%;
+}
+
+p {
+  color: #232525;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 90%;
+}
+
+/* ---------------------------- */
+
+.exercicio-03 {
+  
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.exercicio-03 div {
+  background-color: #f1f1f1;
+  color: #766b7d;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 200px;
+  width: 180px;
+  margin: 0.5em;
+  border-radius: 0.9em;
+  box-shadow: 0.2em 0.2em #d2d2d2; 
+}
+
+/* ---------------------------- */
+
+.exercicio-04 {
+  margin-top: 30px;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.social-img:hover {
+  width: 50px;
+}

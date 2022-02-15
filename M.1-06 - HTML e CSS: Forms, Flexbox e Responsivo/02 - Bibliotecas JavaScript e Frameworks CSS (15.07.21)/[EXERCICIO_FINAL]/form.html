@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício: Formulário</title>
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header class="titulo text-center">
+    <h1>Formulário: Curriculo</h1>
+  </header>
+
+  <main>
+    <form action="" method="GET">
+
+      <div class="primeira-parte">
+        <legend class="text-center">Informações Pessoais</legend>
+
+        <div class="mb-3">
+          <fieldset>
+            <label for="texto-id" class="form-label">Resumo Pessoal:</label>
+            <textarea maxlength="40" name="texto" id="texto-id" class="form-control" required></textarea>
+          </fieldset>
+        </div>
+
+        <div class="row justify-content-evenly">
+          <fieldset class="col">
+            <div class="mb-3 row">
+              <label for="email-id" class="col-sm-2 col-form-label">Email:</label>
+              <div class="col-sm-10">
+                <input type="email" name="email" maxlength="50" id="email-id" class="form-control" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="col">
+            <div class="mb-3 row">
+              <label for="cpf-id" class="col-sm-2 col-form-label">CPF:</label>
+            </div>
+            <div class="col-sm-10">
+              <input type="text" maxlength="11" name="cpf" id="cpf-id" class="form-control" required>
+            </div>
+          </fieldset>
+        </div>
+
+
+        <div class="row g-2">
+          <fieldset class="col-md">
+            <div class="form-floating">
+              <textarea maxlength="200" name="endereco" id="endereco-id" required class="form-control"
+                placeholder="Endereço"></textarea>
+              <label for="endereco-id">Endereço</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="col-2">
+            <div class="form-floating">
+              <select class="form-select" id="estados-id" aria-label="Floating label select example">
+                <option selected>...</option>
+              </select>
+              <label for="estados-id">Estado</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="col-1">
+            <div class="form-check form-switch">
+              <input type="radio" class="form-check-input" name="selecione" id="casa" value="casa" required>
+              <label class="form-check-label" for="casa">Casa</label>
+            </div>
+            <div class="form-check form-switch">
+              <input type="radio" class="form-check-input" name="selecione" id="casa" value="casa" required>
+              <label class="form-check-label" for="casa">Apartamento</label>
+            </div>
+        </div>
+      </div>
+
+
+      <div class="segunda-parte">
+        <legend class="text-center">Experiência Profissional</legend>
+        <label for="curriculo-id">Resumo do curriculo:
+          <textarea maxlength="1000" name="curriculo" id="curriculo-id" required></textarea></label>
+        <br><br>
+        <label for="cargo-id">Cargo:
+          <input type="text" maxlength="40" name="cargo" id="cargo-id" required></label>
+        <br>
+        <label for="descricao-id">Descrição do cargo:
+          <textarea maxlength="500" name="descricao" id="descricao-id" required></textarea></label>
+        <br>
+        <label for="data-inicio-id">Inicio:
+          <input type="date" id="data-inicio-id"></label>
+        <label for="data-termino-id">Termino:
+          <input type="date" id="data-termino-id"></label>
+        </fieldset>
+
+        
+
+      </div>>
+      <button type="submit" id="btn-enviar">Enviar</button>
+
+      <script src="script.js"></script>
+
+  </main>
+</body>
+
+</html>

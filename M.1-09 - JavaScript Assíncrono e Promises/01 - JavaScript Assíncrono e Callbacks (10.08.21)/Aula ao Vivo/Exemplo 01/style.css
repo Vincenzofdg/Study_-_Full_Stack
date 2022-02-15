@@ -1,0 +1,14 @@
+.square{
+    width: 120px;
+    height: 100px;
+    transition: 2s;
+}
+
+.square:hover{
+    width: 240px;
+    height: 200px;
+}
+
+.teste {
+    background-color: aqua;
+}

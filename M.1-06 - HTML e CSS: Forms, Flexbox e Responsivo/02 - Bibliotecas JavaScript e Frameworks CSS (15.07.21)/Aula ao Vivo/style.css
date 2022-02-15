@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(93, 96, 99);
+  background-color: rgb(234, 237, 240);
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.speaker-form {
+  background-color: rgb(246, 247, 248);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  width: 90%;
+  margin: 15px auto;
+  padding: 30px;
+}
+
+.speaker-form h1, .speaker-form p{
+  color: rgb(128, 128, 128);
+  text-shadow: 0.05em 0.05em rgb(0, 221, 255);
+}
+
+[type=email]:focus:valid{
+  color: blue;
+}
+
+[type=email]:focus:invalid{
+  color:red;
+}
+
+button img{
+  width: 20px;
+}

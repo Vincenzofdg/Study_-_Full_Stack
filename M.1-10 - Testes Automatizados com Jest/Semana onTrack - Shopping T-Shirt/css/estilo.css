@@ -1,0 +1,279 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Ubuntu", "open sans", sans-serif;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    /*outline: thin solid blue;*/
+}
+
+.texto_endereco {
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(124, 124, 124);
+}
+
+.grif {
+    color: rgb(107, 43, 43);
+}
+
+.img_logo {
+    height: 30px;
+}
+
+.img_acoes {
+    height: 20px;
+}
+
+.titulo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(124, 124, 124);
+}
+
+.titulo_bloco {
+    font-size: 22px;
+}
+
+.titulo_form {
+    font-size: 35px;
+}
+
+.info-produto{
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: #777 1px solid;
+    border-radius: 4px;
+    min-width: 250px;
+}
+
+.desc_produto {
+    font-size: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(107, 43, 43);
+    font-weight: bold;
+    line-height: normal;
+    margin-top: 5px;
+}
+
+.preco_produto {
+    display: inline;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(119, 119, 119);
+    margin-bottom: 10px;
+}
+
+.preco_antigo {
+    font-size: 16px;
+    margin-left: 0.5em;
+    text-decoration: line-through;
+    font-weight: normal;
+}
+
+.img_produto_lista {
+    width: 30px;
+    height: auto !important;
+}
+
+.img_produto {
+    margin: auto;
+    height: 100%;
+    max-height: 250px;
+    max-width: 230px;
+}
+
+#fundo {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/slide03.jpg');
+    background-size: 100% 100%;
+    text-align: center;
+    padding-top: 220px;
+    line-height: 1em;
+}
+
+#fundo h1,
+#fundo h2 {
+    font-size: 72px;
+    text-shadow: 2px 2px 20px #000;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#fundo h1 {
+    font-size: 60px;
+}
+
+#conteudo {
+    float: left;
+    background-color: #ff1;
+    display: initial;
+    margin: auto;
+    z-index: 6;
+    overflow: hidden;
+    background: #ff1 url('../img/slide01.jpg') no-repeat;
+    /*aplica a imagem*/
+    background-size: cover;
+    /*Ajusta o tamanho para "cobrir"*/
+}
+
+#conteudo2 {
+    float: left;
+    background-color: #ff1;
+    display: initial;
+    margin: auto;
+    z-index: 6;
+    overflow: hidden;
+    background: #ff1 url('../img/slide02.jpgimg/slide02.jpg') no-repeat;
+    /*aplica a imagem*/
+    background-size: contain;
+    /*Ajusta o tamanho para "cobrir"*/
+}
+
+.teste {
+    width: 100%;
+    height: 100vh;
+}
+
+.teste img {
+    width: 100%;
+    height: auto !important;
+    float: left;
+}
+
+.teste_position {
+    position: absolute;
+    top: 240px;
+    right: 0;
+}
+
+.img_texto {
+    position: relative;
+}
+
+.img_texto img {
+    width: 100%;
+    height: auto !important;
+}
+
+.link {
+    position: absolute;
+    font-size: 20px;
+    text-shadow: 2px 2px 20px #000;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.caixa_imgs {
+    margin-top: 5px;
+}
+
+.botao_padrao {
+    background-color: rgb(107, 43, 43);
+    border-style: none;
+    text-align: center;
+    display: block;
+    padding: 1em;
+    margin: 0 auto;
+    margin-bottom: 4%;
+    width: 25%;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+footer {
+    font-size: 14px;
+    background-color: rgb(38, 38, 38);
+    line-height: 1.2em;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+footer h3 {
+    font-size: 18px;
+    color: rgb(107, 43, 43);
+    text-transform: uppercase;
+}
+
+footer p {
+    color: rgb(124, 124, 124);
+    font-weight: 600;
+}
+
+footer a {
+    color: rgb(124, 124, 124);
+    font-weight: bold;
+}
+
+#links {
+    padding-left: 5px;
+}
+
+#links ul {
+    padding: 0;
+}
+
+#links li {
+    list-style-type: none;
+}
+
+#newletter input[type="text"] {
+    height: 26px;
+}
+
+#newletter input[type="submit"] {
+    background-color: rgb(107, 43, 43);
+    font-size: 11px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    border-style: none;
+    height: 26px;
+}
+
+.footer-bottom {
+    min-height: 30px;
+    width: 100%;
+    color: rgb(107, 43, 43);
+    line-height: 30px;
+    min-height: 30px;
+    padding: 7px 0;
+}
+
+.footer-bottom a {
+    color: rgb(107, 43, 43);
+}

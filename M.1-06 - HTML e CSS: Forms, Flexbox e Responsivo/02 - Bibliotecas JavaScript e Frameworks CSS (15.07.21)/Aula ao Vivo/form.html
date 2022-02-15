@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Participação no evento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="speaker-form text-center">
+        <h1 class="display-2">Participação no Evento</h1>
+        <p class="lead">
+            <em>Quer participar do nosso envento? Então preencha o formulário
+                abaixo!</em>
+        </p>
+    </header>
+    <main>
+        <form action="" method="get" class="speaker-form">
+
+            <legend>Dados pessoais</legend>
+            <div class='mb-3'>
+                <label class="form-label" for="full-name">Nome</label>
+                <input class="form-control" type="text" id='full-name' name='full-name'
+                    placeholder="Digite seu nome.." />
+
+                <label class="form-label mt-3" for="email">E-mail</label>
+                <input class="form-control" type="email" name="email" id="email" />
+            </div>
+            <fieldset class='my-3'>
+                <legend>Tipo de palestra</legend>
+                <input class="form-check-input" type="radio" name="tipo-palestra" checked id="palco" value="palco">
+                <label class="form-check-label" for="palco">Palco principal</label>
+                <input class="form-check-input" type="radio" name="tipo-palestra" id="workshop" value="workshop">
+                <label class="form-check-label" for="workshop">Workshop</label>
+            </fieldset>
+            <fieldset class='my-3'>
+                <label class="form-label" for="t-shirt">Camiseta</label>
+                <select class="form-select" name="t-shirt" id="t-shirt">
+                    <option value="xs">PP</option>
+                    <option value="s">P</option>
+                    <option value="m" selected>M</option>
+                    <option value="l">G</option>
+                    <option value="xl">GG</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label class="form-label" for="resumo">Resumo</label>
+                <textarea class="form-control" name="resumo" id="resumo" cols="30" rows="10"
+                    placeholder="Digite um resumo da sua palestra aqui..."></textarea>
+            </fieldset>
+            <fieldset class="my-3">
+                <label class="form-check-label" for="disponibilidade">
+                    <input class="form-check-input" type="checkbox" name="disponibilidade" id="disponibilidade">
+                    <span>Tenho disponibilidade de participar do evento nessa data! <span>
+                </label>
+            </fieldset>
+            <button class="btn btn-primary" id='enviar' type="submit">Enviar</button>
+            <button class="btn btn-secondary" id='limpar' type="reset">Limpar</button>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+            </button>
+            <button id="abreModal" type="button" class="btn btn-info">Abre Modal</button>
+        </form>
+        <div class="container">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Quero colocar uma informação diferente aqui!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="form.js"></script>
+</body>
+
+</html>

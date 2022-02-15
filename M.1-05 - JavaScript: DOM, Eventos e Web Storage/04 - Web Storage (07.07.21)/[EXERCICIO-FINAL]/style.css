@@ -1,0 +1,33 @@
+body {
+    background-color: gray;
+    font-size: 30px;
+}
+
+.topo {
+    background-color: green;
+    text-align: center;
+
+}
+
+.pag {
+    background-color: gray;
+
+    text-align: center;
+}
+
+#input {
+    
+    font-size: 15px;
+    padding: 5px 5px 5px 5px;
+
+}
+
+#btn-1 {
+    font-size: 15px;
+    padding: 5px 5px 5px 5px;
+}
+
+#btn-2 {
+    font-size: 15px;
+    padding: 5px 5px 5px 5px;
+}

@@ -1,0 +1,10 @@
+#texto-id, #email-id, #endereco-id {
+  vertical-align: top;
+  width: 100%;
+}
+
+#curriculo-id, #descricao-id {
+  vertical-align: top;
+  width: 100%;
+  height: 200px;
+}

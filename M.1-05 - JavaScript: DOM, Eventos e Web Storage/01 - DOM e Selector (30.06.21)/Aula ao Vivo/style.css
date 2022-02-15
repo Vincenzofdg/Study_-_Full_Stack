@@ -1,0 +1,56 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.month-container {
+  padding: 70px 25px;
+  background: green;
+  text-align: center;
+}
+
+.month-container ul li {
+  color:white;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.week-days {
+  margin: 0px;
+  padding: 10px 0;
+  background-color: #ddd;
+  font-size: 20px;
+}
+
+.week-days li {
+  display: inline-block;
+  vertical-align: middle;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+#days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+#days li {
+  display: inline-block;
+  vertical-align: middle;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:20px;
+  color: #777;
+}
+
+.mudaCor {
+  background-color: red;
+  color:aqua;
+}
