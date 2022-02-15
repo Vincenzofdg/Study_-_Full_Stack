@@ -1,0 +1,12 @@
+.nameFilter {
+  margin: auto;
+  text-align: center;
+}
+
+.nameInput {
+  border-radius: 8px;
+  font-size: 18px;
+  height: 30px;
+  text-align: center-left;
+  width: 33%;
+}

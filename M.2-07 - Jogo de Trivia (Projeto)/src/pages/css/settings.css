@@ -1,0 +1,20 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.settings {
+  box-shadow: inset 1px 1px 8px #172f41;
+  line-height: 1.7rem;
+  margin: 10px 37%;
+  max-width: 26%;
+  padding-left: 10px;
+}
+
+h3 {
+  margin: 20px auto;
+  text-align: center;
+  width: 80%;
+}

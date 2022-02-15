@@ -1,0 +1,10 @@
+.numericFilter {
+  align-items: center;
+  background: linear-gradient(to bottom, #ffff0009, #ffff0087);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  justify-content: space-evenly;
+  width: 42%;
+}

@@ -1,0 +1,20 @@
+body {
+  min-height: 100vh;
+  background-color: #303030;
+  color: #fafafa;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.color-display {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 4px;
+}

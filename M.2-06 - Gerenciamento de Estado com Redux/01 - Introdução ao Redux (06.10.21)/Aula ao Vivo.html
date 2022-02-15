@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Redux basic example</title>
+      <!-- importação do redux via CND -->
+      <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+  </head>
+
+  <body>
+
+    <div>
+      Clicked: <span id="value">0</span> times
+      <button id="plus">+</button>
+      <button id="minus">-</button>
+      <button id="plus10">Adiciona 10</button>
+    </div>
+
+    <script>
+      // Boa prática criar constantes para não erra a string
+      const PLUS = 'PLUS';
+      const MINUS = 'MINUS';
+
+      // Criação do Reducer
+      function counterReducer(state = { clicks: 0, likes: 0}, action) {
+        switch (action.type) {
+          case PLUS:
+            return {
+              ...state,
+              clicks: state.clicks + action.value,
+            };
+          case MINUS:
+            return {
+              ...state,
+              clicks: state.clicks - action.value,
+            }
+          default:
+            return state;
+        }
+      };
+
+      // Cria a Store = estado global
+      const store = Redux.createStore(
+        counterReducer,
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() // Para que o ReduxDevTools funcione
+      );
+
+      // Actions:
+      const plusAction = { type: PLUS, value: 1 };
+      const minusAction = { type: MINUS, value: 1 };
+      const plus10Action = { type: PLUS, value: 10 };
+  
+      // Eventos:
+      document.getElementById('plus').addEventListener('click', () => store.dispatch(plusAction)); // Adiciona
+      document.getElementById('minus').addEventListener('click', () => store.dispatch(minusAction)); // Subtrai
+      document.getElementById('plus10').addEventListener('click', () => store.dispatch(plus10Action)); // Adiciona mais 10
+
+      // Toda vez que a store for atualizada a aplicação é atualizada
+      store.subscribe(() => document.getElementById('value').innerHTML = store.getState().clicks);
+
+    </script>
+
+  </body>
+</html>

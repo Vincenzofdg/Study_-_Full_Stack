@@ -1,0 +1,48 @@
+.input {
+  display: flex;
+  height: 30px;
+  justify-content: center;
+}
+
+.main-conteiner {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.conteiner-left {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+}
+
+.conteiner-right {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 75%;
+}
+
+.conteiner-left li {
+  list-style-type: none;
+}
+
+.conteiner-right li {
+  align-items: center;
+  border: 1px black solid;
+  border-radius: 3%;
+  display: flex;
+  flex-flow: column nowrap;
+  list-style-type: none;
+  margin-bottom: 5px;
+  width: 100px;
+}
+
+.conteiner-right li h1 {
+  font-size: 10px;
+  text-align: center;
+}
+
+.conteiner-right li img {
+  width: 100px;
+}

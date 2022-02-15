@@ -1,0 +1,19 @@
+.filtersBox {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  justify-content: space-evenly;
+  width: auto;
+}
+
+.selectElement {
+  border-radius: 8px;
+  height: 25px;
+  width: 140px;
+}
+
+.inputElement {
+  border-radius: 8px;
+  height: 19px;
+  width: 100px;
+}

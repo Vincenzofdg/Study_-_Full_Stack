@@ -1,0 +1,53 @@
+body {
+  background-color: #303030;
+  color: white
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.serie-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 40px;
+  background-color: #404040;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.serie-card img {
+  height: auto;
+  width: 200px;
+}
+
+.serie-card .serie-card-powers {
+  margin: 10px 0;
+  font-size: 26px;
+}
+
+.serie-card button {
+  background-color: #8f3051;
+  color: white;
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.serie-list {
+  margin-top: 100px;
+  width: 20%;
+}
+
+.navbar {
+  width: 100vw;
+  position: fixed;
+  height: 50px;
+  background-color: #7e2f7c;
+  padding-left: 100px;
+  display: flex;
+  align-items: center;
+}

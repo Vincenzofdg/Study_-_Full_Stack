@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-ranking {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  text-align: center;
+}
+
+hr {
+  margin: 20px auto;
+  text-align: center;
+  width: 60%;
+}
+
+.list-ranking {
+  counter-reset: item;
+  line-height: 1.7rem;
+  margin: 10px 40%;
+  max-width: 50%;
+  padding-left: 10px;
+}
+
+.li-ranking {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 15%;
+  text-align: left;
+  width: 20em;
+}
+
+li:before {
+  content: counter(item) 'º ';
+  counter-increment: item;
+}
+
+.li-ranking:hover {
+  box-shadow: inset 1px 1px 8px #0b1721;
+}
+
+.btn-ranking {
+  box-shadow: inset 1px 1px 8px #0b1721;
+  line-height: 1.7rem;
+  margin: 10px 42%;
+  max-width: 16%;
+  padding-left: 10px;
+}
