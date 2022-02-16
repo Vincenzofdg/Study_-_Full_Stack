@@ -9,41 +9,53 @@
     "name": "<nome do usuário>"
 }
 ```
+
     - Sua rota deve retornar o seguinte JSON:
+
 ```
 { 
     "message": "Hello, <nome do usuário>!"
 }
 ```
+
 3. Crie uma rota POST /greetings;
     - Sua rota deve receber o seguinte JSON:
+
 ```
 { 
     "name": "<nome do usuário>",
     "age": <idade do usuário>
 }
 ```
+
     - Caso a pessoa usuária tenha idade superior a 17 anos, devolva o JSON com o status code 200 - OK:
+
 ```
 { 
     "message": "Hello, <nome do usuário>!"
 }
 ```
+
     - Caso a pessoa usuária tenha 17 anos ou menos, devolva o JSON com o status code 401 - Unauthorized:
+
 ```
 { 
     "message": "Unauthorized"
 }
-````
+```
+
 4. Crie uma rota PUT /users/:name/:age;
     - Sua rota deve retornar o seguinte JSON: 
+
 ```
 { 
     "message": "Seu nome é <name> e você tem <age> anos de idade"
 }
 ```
+
 5. Crie uma API de dados das personagens de Simpsons;
     - Crie um arquivo chamado simpsons.json e popule com os seguintes dados:
+
 ```
 [
   {
@@ -88,6 +100,7 @@
   }
 ]
 ```
+
     - Utilize o modulo fs do Node para ler/escrever arquivos;
     - Caso algum erro ocorra, deve ser retornado um código 500 (Internal Server Error);
     - Caso dê tudo certo, a resposta deve voltar com status 200 OK;
@@ -97,24 +110,30 @@
 7. Crie um endpoint GET /simpsons/:id;
     - O endpoint deve retornar o personagem com o id informado na URL da requisição.
     - Caso não exista nenhum personagem com o id especificado, retorne o JSON com o status 404 - Not Found:
+
 ```
 { 
     message: 'simpson not found'
 }
 ```
+
 8. Crie um endpoint POST /simpsons.
     - Este endpoint deve cadastrar novos personagens;
     - O corpo da requisição deve receber o seguinte JSON: 
+
 ```
 { 
     id: <id-da-personagem>,
     name: '<nome-da-personagem>'
 }
 ```
+
     - Caso já exista uma personagem com o id informado, devolva o JSON com o status 409 - Conflict
+
 ```
 { 
     message: 'id already exists'
 } 
 ```
+
 - Caso a personagem ainda não exista, adicione-a ao arquivo simpsons.json e devolva um body vazio com o status 204 - No Content. Para encerrar a request sem enviar nenhum dado, você pode utilizar **res.status(204).end()**.
