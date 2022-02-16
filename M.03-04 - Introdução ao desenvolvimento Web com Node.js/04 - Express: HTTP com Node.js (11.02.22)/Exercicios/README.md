@@ -4,19 +4,19 @@
     - Sua rota deve retornar o seguinte JSON: { message: 'pong' }.
 2. Crie uma rota POST /hello;
     - Sua rota deve receber, no body da requisição, o seguinte JSON:
-```
-{ 
-    "name": "<nome do usuário>"
-}
-```
+    ```
+    { 
+        "name": "<nome do usuário>"
+    }
+    ```
 
     - Sua rota deve retornar o seguinte JSON:
 
-```
-{ 
-    "message": "Hello, <nome do usuário>!"
-}
-```
+    ```
+    { 
+        "message": "Hello, <nome do usuário>!"
+    }
+    ```
 
 3. Crie uma rota POST /greetings;
     - Sua rota deve receber o seguinte JSON:
