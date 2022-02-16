@@ -16,12 +16,13 @@ const drinks = [
   { id: 6, name: 'Água Mineral 500 ml', price: 5.0 },
 ];
 
-const myRecepes = (_req, res, _next) => res.status(200).json(recipes);
+// Deixa em ordem alfabetica:
+const sortMe = (param) => param.sort((a, b) => a.name > b.name ? -1 : 0)
 
-const myDrinks = (_req, res, _next) => res.status(200).json(drinks);
+const myRecepes = (_req, res, _next) => res.status(200).json(recipes);
+const myDrinks = (_req, res, _next) => res.status(200).json(sortMe(drinks));
 
 app.listen(3001, () => console.log('Aplicação: http://localhost:3001'));
 
 app.get('/recipes', myRecepes);
 app.get('/drinks', myDrinks);
-
