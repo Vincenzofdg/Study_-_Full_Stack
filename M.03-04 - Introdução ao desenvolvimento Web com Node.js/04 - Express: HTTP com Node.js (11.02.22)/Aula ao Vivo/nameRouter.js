@@ -6,6 +6,8 @@ const nameRouter = Router();
 
 const FILENAME = './names.txt';
 
+// o try catch esta aqui para direcionar o tratamento de erro no next() que irá tratar
+// o erro com a função do index.js
 nameRouter.get('/', auth, async (_req, res, next) => {
   try {
     const names = await fs.readFile(FILENAME);

@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs/promises');
 // const rescue = require('express-rescue');
+// envelopa a funcao dentro de rescue(funcao)
 
 const bodyParser = require('body-parser');
 const nameRouter = require('./nameRouter');
@@ -35,9 +36,8 @@ app.get('/hello', logger, (_req, res, next) => {
 
 app.use('/names', nameRouter);
 
-app.use((error, req, res, next) => {
-  res.status(500).send({ message: error.message });
-});
+// Quando algum erro acontecer o App irá usar esta função
+app.use((error, _req, res, _next) => res.status(500).send({ message: error.message }));
 
 // Opcional: Indicador para saber que iniciou corretamente
 app.listen(3000, () => console.log('Turma 15 na porta 3000'));
