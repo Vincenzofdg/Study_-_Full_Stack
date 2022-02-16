@@ -10,6 +10,8 @@ const auth = require('./auth');
 
 const app = express();
 
+// caso a versao do express seja superior a 4.16 body-parse pode ser substituida pelo proprio express
+// app.use.(express.json());
 app.use(bodyParser.json());
 
 const logger = (req, _res, next) => {
@@ -22,17 +24,12 @@ const pipeLine = [auth, logger];
 app.post('/login', (req, res) => {
   let token = Array.from({ length: 10 });
   token = token.map((e) => String.fromCharCode(64 + Math.random() * 23));
-  console.log(token);
   res.status(200).json({ token: token.join('') });
 });
 
-app.get('/secure/hello', pipeLine, (_req, res) => {
-  return res.status(200).send({ msg: 'Hello world!' });
-});
+app.get('/secure/hello', pipeLine, (_req, res) => res.status(200).send({ msg: 'Hello world!' }));
 
-app.get('/hello', logger, (_req, res, next) => {
-  return res.status(200).send({ msg: 'Hello world!' });
-});
+app.get('/hello', logger, (_req, res, next) => res.status(200).send({ msg: 'Hello world!' }));
 
 app.use('/names', nameRouter);
 

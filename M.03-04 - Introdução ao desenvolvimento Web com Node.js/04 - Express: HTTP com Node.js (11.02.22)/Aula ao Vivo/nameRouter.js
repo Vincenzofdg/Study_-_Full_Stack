@@ -21,7 +21,7 @@ nameRouter.get('/', auth, async (_req, res, next) => {
 nameRouter.post('/', auth, async (req, res, next) => {
   const name = req.body.name;
   console.log(name);
-  await fs.appendFile(FILENAME, `\n${name}`);
+  await fs.appendFile(FILENAME, `\n${name}`); // Utilizar esse formato para o nome nao sobrescrever a lista, so acrescentar
   res.status(201).end();
 });
 
