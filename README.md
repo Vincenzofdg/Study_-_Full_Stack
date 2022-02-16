@@ -1,14 +1,15 @@
-Curso realizado em: 2021 - 2022.
+![trybe_banner](./banner.jpeg)
 
-Turma: 14 A.
+<h3 align="center"><strong>Curso realizado em: 2021 - 2022. || Turma(s): 14a e 15b</strong></h3>
+<p align="center">A Trybe é uma escola de desenvolvimento web que oferece mais de 1500 horas de formação abordando fundamentos de desenvolvimento web, desenvolvimento Front e Back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais.</p>
 
-### Curso de duração de 1 ano. Dividido em 4 grandes blocos, sendo eles:
+## O Curso é dividido em 4 grandes blocos, sendo eles:
 
-**01. Fundamentos do Desenvolvimento Web;**
+ - **Fundamentos do Desenvolvimento Web;**
 
-**02. Desenvolvimento Front-end**
+ - **Desenvolvimento Front-end**
 
-**03. Desenvolvimento Back-end**
+ - **Desenvolvimento Back-end**
 
-**04. Ciência da Computação**
+ - **Ciência da Computação**
 
