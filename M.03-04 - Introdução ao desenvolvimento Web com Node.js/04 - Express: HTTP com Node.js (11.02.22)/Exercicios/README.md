@@ -117,7 +117,7 @@
         name: '<nome-da-personagem>'
     }
     ```
-    - Caso já exista uma personagem com o id informado, devolva o JSON com o status 409 - Conflict
+- Caso já exista uma personagem com o id informado, devolva o JSON com o status 409 - Conflict
     ```
     { 
         message: 'id already exists'
