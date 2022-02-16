@@ -3,8 +3,8 @@ const fs = require('fs/promises');
 // const rescue = require('express-rescue');
 
 const bodyParser = require('body-parser');
-
 const nameRouter = require('./nameRouter');
+
 const auth = require('./auth');
 
 const app = express();
@@ -39,6 +39,5 @@ app.use((error, req, res, next) => {
   res.status(500).send({ message: error.message });
 });
 
-app.listen(3000, () => {
-  console.log('Turma 15 na porta 3000');
-});
+// Opcional: Indicador para saber que iniciou corretamente
+app.listen(3000, () => console.log('Turma 15 na porta 3000'));
