@@ -108,7 +108,7 @@
         message: 'simpson not found'
     }
     ```
-8. Crie um endpoint POST /simpsons.
+8. Crie um endpoint POST /simpsons;
 - Este endpoint deve cadastrar novos personagens;
 - O corpo da requisição deve receber o seguinte JSON: 
     ```
@@ -124,3 +124,28 @@
     } 
     ```
 - Caso a personagem ainda não exista, adicione-a ao arquivo simpsons.json e devolva um body vazio com o status 204 - No Content. Para encerrar a request sem enviar nenhum dado, você pode utilizar **res.status(204).end()**.
+
+9. Adicione autenticação a todos os endpoints;
+- O token deve ser enviado através do header Authorization .
+- O token deve ter exatamente 16 caracteres.
+- Caso o token seja inválido ou inexistente, a resposta deve possuir o status 401 - Unauthorized e o JSON:
+    ```
+    { 
+        message: 'Token inválido!'
+    }
+    ```
+10. Crie uma rota POST /signup.
+
+- A rota deve receber, no body da requisição, os campos email , password , firstName e phone;
+- Caso algum dos campos não esteja preenchido, a response deve possuir status 401 - Unauthorized e o JSON:
+    ```
+    { 
+        message: 'missing fields'
+    }
+    ```
+- Caso todos os parâmetros estejam presentes, a rota deve gerar um token aleatório válido, e a resposta deve conter o status 200 - OK, e o JSON:
+    ```
+    {
+        token: '<token-aleatorio>'
+    }
+    ```
