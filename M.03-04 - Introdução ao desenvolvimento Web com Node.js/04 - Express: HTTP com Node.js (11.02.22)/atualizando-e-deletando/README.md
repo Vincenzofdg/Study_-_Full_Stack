@@ -1,5 +1,6 @@
-No Front-end a requisição do PUT é feita desta forma:
+No Front-end a requisição do PUT e DELETE são feitas da sequinte forma:
 
+**Put:**
 ```
 fetch(`http://localhost:3001/recipes/2`, {
   method: 'PUT',
@@ -12,8 +13,10 @@ fetch(`http://localhost:3001/recipes/2`, {
     price: 40
   })
 });
+```
 
-// Requisição do tipo DELETE
+**Delete:**
+```
 fetch(`http://localhost:3001/recipes/4`, {
   method: 'DELETE',
   headers: {
