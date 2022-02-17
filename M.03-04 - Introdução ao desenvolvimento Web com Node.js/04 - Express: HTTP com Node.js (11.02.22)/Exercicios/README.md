@@ -4,7 +4,7 @@
 - Sua rota deve retornar o seguinte JSON:
     ```
     { 
-        message: 'pong'
+        msg: 'pong'
     }
     ```
 2. Crie uma rota POST /hello;
@@ -17,7 +17,7 @@
 - Sua rota deve retornar o seguinte JSON:
     ```
     { 
-        "message": "Hello, <nome do usuário>!"
+        "msg": "Hello, <nome do usuário>!"
     }
     ```
 
@@ -32,13 +32,13 @@
 - Caso a pessoa usuária tenha idade superior a 17 anos, devolva o JSON com o status code 200 - OK:
     ```
     { 
-        "message": "Hello, <nome do usuário>!"
+        "msg": "Hello, <nome do usuário>!"
     }
     ```
 - Caso a pessoa usuária tenha 17 anos ou menos, devolva o JSON com o status code 401 - Unauthorized:
     ```
     { 
-        "message": "Unauthorized"
+        "msg": "Unauthorized"
     }
     ```
 4. Crie uma rota PUT /users/:name/:age;

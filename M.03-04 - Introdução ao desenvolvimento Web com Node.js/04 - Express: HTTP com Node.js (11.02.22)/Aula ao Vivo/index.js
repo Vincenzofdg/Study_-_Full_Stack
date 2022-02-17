@@ -11,7 +11,7 @@ const auth = require('./auth');
 const app = express();
 
 // caso a versao do express seja superior a 4.16 body-parse pode ser substituida pelo proprio express
-// app.use.(express.json());
+// app.use(express.json());
 app.use(bodyParser.json());
 
 const logger = (req, _res, next) => {
