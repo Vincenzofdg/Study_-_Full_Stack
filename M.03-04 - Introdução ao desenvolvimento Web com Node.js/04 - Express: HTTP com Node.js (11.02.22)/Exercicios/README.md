@@ -45,53 +45,23 @@
 - Sua rota deve retornar o seguinte JSON: 
     ```
     { 
-        "message": "Seu nome é <name> e você tem <age> anos de idade"
+        "msg": "Seu nome é <name> e você tem <age> anos de idade"
     }
     ```
 5. Crie uma API de dados das personagens de Simpsons;
 - Crie um arquivo chamado simpsons.json e popule com os seguintes dados:
     ```
     [
-    {
-        "id": "1",
-        "name": "Homer Simpson"
-    },
-    {
-        "id": "2",
-        "name": "Marge Simpson"
-    },
-    {
-        "id": "3",
-        "name": "Bart Simpson"
-    },
-    {
-        "id": "4",
-        "name": "Lisa Simpson"
-    },
-    {
-        "id": "5",
-        "name": "Maggie Simpson"
-    },
-    {
-        "id": "6",
-        "name": "Ned Flanders"
-    },
-    {
-        "id": "7",
-        "name": "Montgomery Burns"
-    },
-    {
-        "id": "8",
-        "name": "Nelson Muntz"
-    },
-    {
-        "id": "9",
-        "name": "Krusty"
-    },
-    {
-        "id": "10",
-        "name": "Milhouse Van Houten"
-    }
+        { "id": "1", "name": "Homer Simpson" },
+        { "id": "2", "name": "Marge Simpson" },
+        { "id": "3", "name": "Bart Simpson" },
+        { "id": "4", "name": "Lisa Simpson" },
+        { "id": "5", "name": "Maggie Simpson" },
+        { "id": "6", "name": "Ned Flanders" },
+        { "id": "7", "name": "Montgomery Burns" },
+        { "id": "8", "name": "Nelson Muntz" },
+        { "id": "9", "name": "Krusty" },
+        { "id": "10","name": "Milhouse Van Houten" }
     ]
     ```
 - Utilize o modulo fs do Node para ler/escrever arquivos;

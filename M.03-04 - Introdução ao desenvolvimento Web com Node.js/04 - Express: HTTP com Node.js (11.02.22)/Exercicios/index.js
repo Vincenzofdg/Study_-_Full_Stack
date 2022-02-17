@@ -26,6 +26,11 @@ app.post('/greetings', (req, res) => {
 })
 
 // Exercicio 04
-app.put('/users/:name/:age', () => {} );
+app.put('/users/:name/:age', (req, res) => {
+  const { name, age } = req.params; // :3001/users/Cleber/45
+  const msg = { msg: `Seu nome é ${name} e você tem ${age} anos de idade` }
+  
+  return res.status(200).json(msg);
+} );
 
 app.listen(3001, () => console.log('Exercicio na porta 3001'));
