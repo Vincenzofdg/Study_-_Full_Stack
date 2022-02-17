@@ -52,6 +52,13 @@ app.put('/recipes/:id', (req, res) => {
   };
 });
 
+// No Postman:
+// PUT :3001/recipes/2
+//  { 
+//    "name": "Mudando", 
+//     "price": 300
+//  }
+
 app.delete('/recipes/:id', (req, res) => {
   const { id } = req.params;
   const recipeIndex = recipes.findIndex((r) => r.id === parseInt(id));
@@ -63,6 +70,9 @@ app.delete('/recipes/:id', (req, res) => {
     res.status(204).end();
   };
 });
+
+// No Postman:
+// DELETE :3001/recipes/2
 //----------------------------------------------------------------------------
 
 // Bebidas:
@@ -82,11 +92,38 @@ app.post('/drinks', (req, res) => {
   res.status(201).json({ message: 'Drink created successfully!'});
 });
 
+app.put('/drinks/:id', (req, res) => {
+  const { id } = req.params;
+  const { name, price } = req.body;
+  const indexFound = drinks.findIndex((r) => r.id === parseInt(id));
+  const msg = { message: 'Recipe not found!' };
+
+  if (indexFound === -1) return res.status(404).json(msg);
+  else {
+    drinks[indexFound] = { ...recipes[indexFound], name, price };
+    res.status(204).end();
+  };
+});
+
+app.delete('/drinks/:id', (req, res) => {
+  const { id } = req.params;
+  const indexFound = drinks.findIndex((r) => r.id === parseInt(id));
+  const msg = { message: 'Recipe not found!' };
+
+  if (indexFound === -1) return res.status(404).json(msg);
+  else {
+    drinks.splice(indexFound, 1);
+    res.status(204).end();
+  };
+});
+
+//----------------------------------------------------------------------------
 // Validação de Token
 app.get('/validateToken', (req, res) => {
   const token = req.headers.authorization;
   if (!token || token.length !== 16) return res.status(401).json({message: 'Invalid Token!'});
   else return res.status(200).json({message: 'Valid Token!'})
 });
+//----------------------------------------------------------------------------
 
 app.listen(3001, () => console.log('Aplicação ouvindo na porta 3001'));
