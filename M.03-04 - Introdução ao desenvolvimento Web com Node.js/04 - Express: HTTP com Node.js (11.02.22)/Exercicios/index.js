@@ -21,7 +21,7 @@ app.post('/greetings', (req, res) => {
   const pass = { msg: `Hello, ${name}!` };
   const deny = { msg: 'Unauthorized' };
 
-  if (age > 17) return res.status(200).json(pass);
+  if (age > 17) return res.status(201).json(pass);
   else return res.status(401).json(deny) ;
 })
 
