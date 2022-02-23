@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 
+// process.env.PORT => Qualquer porta que esteja na variável glocal PORT, caso não haja nada adotar 3000
 const PORT = process.env.PORT || 3000;
 const OK = 200;
 
