@@ -12,4 +12,5 @@
  - **Desenvolvimento Back-end**
 
  - **Ciência da Computação**
+ - **Pedrogay**
 

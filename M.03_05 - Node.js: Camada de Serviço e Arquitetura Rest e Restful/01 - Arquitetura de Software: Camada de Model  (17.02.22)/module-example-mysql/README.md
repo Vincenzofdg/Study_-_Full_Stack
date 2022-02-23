@@ -1,4 +1,4 @@
-1. Criar o banco de dados (model_example)
+1. Criar o banco de dados (model_example);
 ```
 CREATE DATABASE IF NOT EXISTS model_example;
 
@@ -23,3 +23,10 @@ VALUES ('George','R. R.','Martin','1948-09-20','norte-americano'),
     ('Frank',NULL,'Herbert','1920-02-11','norte-americano'),
     ('Júlio',NULL,'Verne','1905-03-24','francês');
 ```
+
+2. Conectar com o banco de dados;
+    - MySQL (mysql2);
+        - npm init -y
+        - npm i mysql2
+        - npm i express body-parser
+        - npm i nodemon -D
