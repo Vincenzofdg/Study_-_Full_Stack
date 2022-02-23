@@ -1,9 +1,21 @@
 const connection = require('./connection');
 
-const getAll = async () => {
-    const result = await connection.execute('SELECT id, first_name, middle_name, last_name FROM authors');
+// Mudando snake_case para camelCase
+const serialize = ({ id, first_name, middle_name, last_name }) => {
+    return {
+        id: id,
+        firstName: first_name,
+        middleName: middle_name,
+        lastName: last_name,
+        fullName: `${first_name} ${middle_name} ${last_name}` 
+    }
+}
 
-    return result;
+const getAll = async () => {
+    // Pegando o primeiro elemento do array e jogando na variável authors
+    const [authors] = await connection.execute('SELECT id, first_name, middle_name, last_name FROM authors');
+
+    return authors.map(serialize);
 }
 
 module.exports = {

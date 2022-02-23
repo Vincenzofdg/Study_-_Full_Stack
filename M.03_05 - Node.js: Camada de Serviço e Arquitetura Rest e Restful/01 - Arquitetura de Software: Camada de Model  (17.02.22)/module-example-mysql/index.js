@@ -1,11 +1,7 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-
 const app = express();
 
-app.use(bodyParser.json());
-
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const OK = 200;
 
 const Author = require('./models/Author');
@@ -16,4 +12,4 @@ app.get('/authors', async (_req, res) => {
     res.status(OK).json(authors);
 });
 
-app.listen(PORT, () => console.log(`Example app listening on port ${PORT}`));
+app.listen(PORT, () => console.log(`Exemplo de Modulo na porta ${PORT}`));

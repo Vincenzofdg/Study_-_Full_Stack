@@ -30,3 +30,9 @@ VALUES ('George','R. R.','Martin','1948-09-20','norte-americano'),
         - npm i mysql2
         - npm i express body-parser
         - npm i nodemon -D
+
+## Diferença de createPool e createConnection
+
+When you create a connection, you only have one connection and it lasts until you close it (or it is closed by the mysql server). You can pass it around by reference and re-use it, or you can create and close connections on demand.
+
+A pool is a place where connections get stored. When you request a connection from a pool, you will receive a connection that is not currently being used, or a new connection. If you're already at the connection limit, it will wait until a connection is available before it continues. These pooled connections do not need to be manually closed, they can remain open and be easily reused.
