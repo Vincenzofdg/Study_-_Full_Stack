@@ -13,6 +13,7 @@ const getById = async (id) => {
         'SELECT id, title FROM books WHERE id = ?', [id]
     );
 
+    if (book.length === 0) return null
     return book;
 }
 

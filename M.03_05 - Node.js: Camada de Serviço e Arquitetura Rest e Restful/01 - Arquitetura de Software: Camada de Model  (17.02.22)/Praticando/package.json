@@ -1,5 +1,5 @@
 {
-  "name": "model-mysql-praticando",
+  "name": "praticando",
   "version": "1.0.0",
   "description": "**Use o Banco de Dados model_DB.sql**",
   "main": "index.js",
