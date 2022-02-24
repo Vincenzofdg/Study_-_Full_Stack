@@ -10,7 +10,15 @@ const Author = require('./models/Author');
 app.get('/authors', async (_req, res) => {
     const authors = await Author.getAll();
 
-    res.status(OK).json(authors);
+    return res.status(OK).json(authors);
 });
+
+app.get('/authors/:id', async (req, res) => {
+    const { id } = req.params;
+    const author = await Author.findById(Number(id));
+    
+    if (!author) return res.status(404).json({ msg: 'Not Found' });
+    return res.status(200).json(author);
+})
 
 app.listen(PORT, () => console.log(`Exemplo de Modulo na porta ${PORT}`));
