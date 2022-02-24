@@ -20,7 +20,7 @@ const getAll = async () => {
     return authors.map(serialize);
 }
 
-const findById = async (id) => {
+const getById = async (id) => {
     const [authors] = await connection.execute(
         'SELECT id, first_name, middle_name, last_name FROM authors WHERE id = ?',
         [id]
@@ -46,7 +46,7 @@ const create = async (firstName, middleName, lastName) => {
 
 module.exports = {
     getAll,
-    findById,
+    getById,
     isValid,
     create,
 }
