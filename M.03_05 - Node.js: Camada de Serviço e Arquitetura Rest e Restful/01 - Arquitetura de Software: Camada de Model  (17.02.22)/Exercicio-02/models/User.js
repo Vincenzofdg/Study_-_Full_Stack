@@ -1,4 +1,5 @@
 const e = require('express');
+const { execute } = require('./connection');
 const connection = require('./connection');
 
 // Validação dos Campos do usuário:
@@ -28,10 +29,18 @@ const add = async (firstName, lastName, email, userPassword) => {
         firstName,
         lastName,
         email,
-        userPassword};
+        userPassword
+    };
+}
+
+// Pega todos os Usuarios de db.sql
+const getAll = async () => {
+    const [users] = await connection.execute('SELECT * FROM users');
+    return users;
 }
 
 module.exports = {
     isNotValid,
     add,
+    getAll,
 }
