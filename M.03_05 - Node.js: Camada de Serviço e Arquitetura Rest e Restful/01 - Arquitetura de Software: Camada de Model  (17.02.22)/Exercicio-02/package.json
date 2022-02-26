@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3"
+  },
+  "name": "exercicio-02",
+  "description": "01. Crie o endpoint POST `/user`; - Seu endpoint deve receber o seguinte conteúdo no body da request: ```json {     \"firstName\": \"Calebe\",     \"lastName\": \"Junior\",     \"email\": \"calebe.junior@gmail.com\",     \"password\": \"d496d5ea2442\" } ```",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
