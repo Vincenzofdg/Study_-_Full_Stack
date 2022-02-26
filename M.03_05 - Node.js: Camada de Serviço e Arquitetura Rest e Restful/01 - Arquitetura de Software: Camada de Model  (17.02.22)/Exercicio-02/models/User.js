@@ -1,5 +1,4 @@
 const e = require('express');
-const { execute } = require('./connection');
 const connection = require('./connection');
 
 // Validação dos Campos do usuário:
@@ -15,7 +14,7 @@ const isNotValid = (firstName, lastName, email, userPassword) => {
     if (email === '' ) return { error: true, message: 'O campo \'email\' deve existir' };
 
     return { error: false, message: 'Tudo Okay' };
-}
+};
 
 // Cria um Novo usuário:
 const add = async (firstName, lastName, email, userPassword) => {
@@ -31,7 +30,7 @@ const add = async (firstName, lastName, email, userPassword) => {
         email,
         userPassword
     };
-}
+};
 
 // Pega todos os Usuarios de db.sql
 const getAll = async () => {
@@ -42,6 +41,15 @@ const getAll = async () => {
 const getById = async (id) => {
     const [user] = await connection.execute('SELECT * FROM db.users WHERE id = ?;', [id]);
     return user;
+};
+
+const update = async (firstName, lastName, email, userPassword, id) => {
+    await connection.execute(
+        'UPDATE db.users SET first_name = ?, last_name = ?, email = ?, user_password = ? WHERE id = ?;',
+        [firstName, lastName, email, userPassword, id],
+    );
+      
+    return { id, firstName, lastName, email, userPassword };
 }
 
 module.exports = {
@@ -49,4 +57,5 @@ module.exports = {
     add,
     getAll,
     getById,
+    update,
 }

@@ -8,7 +8,6 @@ const User = require('./models/User');
 const PORT = process.env.PORT || 3000;
 const OK = 200;
 const CREATED = 201;
-// const BAD = 400;
 const NOT_FOUND = 404;
 
 app.get('/user', async (req, res) => {
@@ -43,5 +42,25 @@ app.post('/user', async (req, res) => {
 
     res.status(CREATED).json(newUser);
 });
+
+app.put('/user/:id', async (req, res) => {
+    const { id } = req.params;
+    const { firstName, lastName, email, password } = req.body;
+    const request = [ firstName, lastName, email, password ];
+
+    if (!(await User.getById(id))) return res.status(NOT_FOUND).json({
+        error: true,
+        message: 'Usuário não encontrado'
+    });
+
+    if (User.isNotValid(...request).error) {
+        const msg = User.isNotValid(...request);
+        res.status(OK).json(msg);
+    }
+
+    const editedUser = await User.update(...request, id);
+
+    return res.status(OK).json(editedUser);
+})
 
 app.listen(PORT, console.log(`Exercicio rodando na porta ${PORT}`));
