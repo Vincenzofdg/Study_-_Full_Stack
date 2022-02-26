@@ -1,4 +1,4 @@
-01. Crie o endpoint POST `/user`;
+01. Crie o endpoint POST /user;
 - Seu endpoint deve receber o seguinte conteúdo no body da request:
 ```json
 {
