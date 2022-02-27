@@ -25,7 +25,7 @@ const isValid = async (title, authorId) => {
 
 const create = async (title, authorId) => {
     connection.execute(
-        'INSERT INTO model_example.books (title, author_id) VALUE (?, ?)',
+        'INSERT INTO db_exemplo.books (title, author_id) VALUE (?, ?)',
         [title, authorId]
     );
 }

@@ -39,7 +39,7 @@ const isValid = (firstName, lastName) => {
 
 const create = async (firstName, middleName, lastName) => {
     connection.execute(
-        'INSERT INTO model_example.authors (first_name, middle_name, last_name) VALUE (?, ?, ?)',
+        'INSERT INTO db_exemplo.authors (first_name, middle_name, last_name) VALUE (?, ?, ?)',
         [firstName, middleName, lastName]
     );
 }
