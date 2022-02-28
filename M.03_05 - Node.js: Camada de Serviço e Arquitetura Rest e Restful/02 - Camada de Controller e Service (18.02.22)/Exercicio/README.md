@@ -1,8 +1,10 @@
-**Usar o banco de dados:** `cep_lookup`
+**Usar o banco de dados:** `db.sql`
+
+**npm i express mysql2 dotenv**
 
 01. Crie uma nova API utilizando o express;
  - A aplicação deve ser um pacote Node.js;
- - Dê ao pacote o nome de cep-lookup;
+ - Dê ao pacote o nome de exercicio;
  - Utilize o express para gerenciar os endpoints da sua aplicação;
 
 02. A aplicação deve ter a rota GET /ping , que retorna o status 200 OK e o seguinte JSON:
