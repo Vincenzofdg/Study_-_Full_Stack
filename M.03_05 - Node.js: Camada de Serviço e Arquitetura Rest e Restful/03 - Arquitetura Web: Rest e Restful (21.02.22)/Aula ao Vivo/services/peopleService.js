@@ -4,9 +4,9 @@ const add = async () => peopleModel.add();
 
 const getAll = async () => peopleModel.getAll();
 
-const getById = async () => peopleModel.getById();
+const getById = async (id) => peopleModel.getById(id);
 
-const getByName = async () => peopleModel.getByName();
+const getByName = async (name) => peopleModel.getByName(name);
 
 const update = async (id, name, age) => {
   const numberId = Number(id);
