@@ -10,7 +10,16 @@ const findByCEP = async (cep) => {
     return result;
 }
 
+const add = async ({ cep, logradouro, bairro, localidade, uf }) => {
+    const result = await connection.execute(
+        'INSERT INTO db.ceps (cep, logradouro, bairro, localidade, uf) VALUES (?, ?, ?, ?, ?)',
+        [cep, logradouro, bairro, localidade, uf]
+    );
+    return { cep, logradouro, bairro, localidade, uf };
+}
+
 module.exports = {
     getAll,
-    findByCEP
+    findByCEP,
+    add
 }
