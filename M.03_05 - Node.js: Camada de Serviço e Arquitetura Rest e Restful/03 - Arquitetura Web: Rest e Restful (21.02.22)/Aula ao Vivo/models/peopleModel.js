@@ -31,10 +31,13 @@ const getByName = async (name) => {
   return result;
 }
 
-const update = async (id, name, age) => connection.execute(
-  'UPDATE people SET name = ?, age = ? WHERE id = ?',
-  [name, age, id]
-);
+const update = async (id, name, age) => {
+  const [result] = await connection.execute(
+    'UPDATE people SET name = ?, age = ? WHERE id = ?',
+    [name, age, id]
+  );
+  return result;
+}
 
 const exclude = async (id) => {
   const people = await getById(id);
