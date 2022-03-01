@@ -2,7 +2,7 @@ const connection = require('./connection');
 
 const add = async (name, age) => {
   const [result] = await connection.execute(
-    'INSERT INSTO people (name, age) VALUES (?, ?);',
+    'INSERT INTO people (name, age) VALUES (?, ?);',
     [name, age]
   );
   return { id: result.insertId, name, age};
@@ -22,6 +22,15 @@ const getById = async (id) => {
   return result;
 };
 
+const getByName = async (name) => {
+  const [result] = await connection.execute(
+    'SELECT * FROM people WHERE name = ?;',
+    [name]
+  );
+  if (!result.length) return null;
+  return result;
+}
+
 const update = async (id, name, age) => connection.execute(
   'UPDATE people SET name = ?, age = ? WHERE id = ?',
   [name, age, id]
@@ -35,12 +44,13 @@ const exclude = async (id) => {
     [id]
   );
   return people;
-}
+};
 
 module.exports = {
   add,
   getAll,
   getById,
+  getByName,
   update,
   exclude
 }
