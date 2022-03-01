@@ -52,4 +52,15 @@ router.put('/:id', async (req, res) => {
   };
 });
 
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    const person = await peopleService.exclude(id);
+    return res.status(200).json(person);
+  } catch (e) {
+    console.log(e);
+    return res.status(500).json({ msg: 'Erro de servidor' });
+  }
+});
+
 module.exports = router;

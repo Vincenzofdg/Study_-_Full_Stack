@@ -4,9 +4,14 @@ const add = async () => peopleModel.add();
 
 const getAll = async () => peopleModel.getAll();
 
-const getById = async (id) => peopleModel.getById(id);
+// Exemplo: Criando regra de negocio garantindo que o ID do params é um número
+const getById = async (name) => {
+  if (typeof id === 'string') return null;
+  const result = await peopleModel.getById(name);
+  return result;
+};
 
-const getByName = async (name) => peopleModel.getByName(name);
+const getByName = async (id) => peopleModel.getByName(id);
 
 const update = async (id, name, age) => {
   const numberId = Number(id);
@@ -16,7 +21,7 @@ const update = async (id, name, age) => {
   return { id, name, age };
 };
 
-const exclude = async () => peopleModel.exclude();
+const exclude = async (id) => peopleModel.exclude(id);
 
 module.exports = {
   add,
