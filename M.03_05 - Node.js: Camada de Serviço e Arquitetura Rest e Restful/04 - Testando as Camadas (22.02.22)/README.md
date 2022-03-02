@@ -1,0 +1,1 @@
+**Instalar:** `npm i chai mocha sinon`
