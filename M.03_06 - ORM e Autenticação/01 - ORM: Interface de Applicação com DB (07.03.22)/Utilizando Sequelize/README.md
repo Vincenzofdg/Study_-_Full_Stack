@@ -1,9 +1,8 @@
 **Instalando:**
 
 1. npm init -y
-2. npm install sequelize
-3. npm install sequelize-cli
-4. npm install mysql2
+2. npm install mysql2 sequelize
+3. npm install --save-dev sequelize-cli
 
 **Utilizando:** `npx sequelize-cli init`
 
