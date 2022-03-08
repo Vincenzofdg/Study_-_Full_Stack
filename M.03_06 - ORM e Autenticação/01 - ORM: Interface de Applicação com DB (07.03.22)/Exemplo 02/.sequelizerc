@@ -1,0 +1,8 @@
+const path = require('path'); // Biblioteca do node para manipulação de diretorios
+
+module.exports = {
+    'config': path.resolve('sequelize', 'config', 'config.js'),
+    'models-path': path.resolve('sequelize', 'models'),
+    'seeders-path': path.resolve('sequelize', 'seeders'),
+    'migrations-path': path.resolve('sequelize', 'migrations')
+};
