@@ -1,0 +1,16 @@
+{
+  "name": "exercicio",
+  "version": "1.0.0",
+  "description": "Crie uma API simples no node utilizando express. No arquivo index.js, crie uma rota do tipo get com o endereço raiz '/' que entregue como resposta o texto \"Está vivo!!!\". Faça o deploy no Heroku utilizando o CLI.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
