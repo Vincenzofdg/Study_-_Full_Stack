@@ -1,0 +1,21 @@
+{
+  "name": "test-area",
+  "version": "1.0.0",
+  "description": "01. `npm init -y` 2.  `npm install express dotenv` 3.  `npm install eslint -D` 4.  Crie `index.js` e Adicione: ```js const express = require('express'); require('dotenv').config();",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  }
+}

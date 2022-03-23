@@ -1,0 +1,9 @@
+build:
+  docker:
+    # executar uma aplicação web a partir do nosso Dockerfile
+    web: Dockerfile
+
+run:
+  # Não é necessariop neste casso... mesma coisa que o CMD ["npm", "start"] do Dockerfile
+  web: node index.js
+  
