@@ -2,6 +2,7 @@
 2. `npm i tsc -D`
 3. `tsc --init`
 4. `npm i typescript -D`
+
 `tsd -w`
 
 <hr />
