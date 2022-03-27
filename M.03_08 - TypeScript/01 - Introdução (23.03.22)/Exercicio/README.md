@@ -2,9 +2,17 @@
 - Crie uma pasta e entre nela `mkdir nome_pasta && cd nome_pasta`;
 - Inicie o npm `npm init -y`;
 - Instale os pacotes:
-  - `npm install typescript -D`
-  - `npm install tsc -D`
-  - `tsc --init`
+  - `npm install -D @tsconfig/node14 @types/node typescript`
+  - `touch tsconfig.json`
+
+```js
+{
+  "extends": "@tsconfig/node14/tsconfig.json", // estendemos a configuração base para o Node 14
+  "compilerOptions": {
+    "outDir": "./dist", // pasta onde nossos arquivos compilados serão salvos
+  },
+}
+```
 
 ## Exercicio 01
 Crie um script para converter unidades de medida de comprimento:
@@ -168,7 +176,7 @@ Crie uma enum que represente os meses do ano.
 Crie uma enum que represente as estações climáticas do ano.
 
 ## Exercicio 11
-Utilizando as enums criadas nos exercícios anteriores e o pacote readline-sync, que cria uma interface para ler o que for inserido no console (mais informações, veja a documentação ), crie um programa que quando a pessoa usuária escolher o mês do ano e o hemisfério no terminal:
+Utilizando as enums criadas nos exercícios anteriores e o pacote readline-sync, que cria uma interface para ler o que for inserido no console (mais informações, veja a documentação), crie um programa que quando a pessoa usuária escolher o mês do ano e o hemisfério no terminal:
 
 - Retorne em que estação aquele mês se encontra;
 - Caso seja um mês que possua duas estações retorne ambas.
