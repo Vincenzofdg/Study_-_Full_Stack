@@ -44,7 +44,7 @@ person2.walk();
 // ===========================================================
 // USANDO O PLAYGROUND ==> https://www.typescriptlang.org/play
 
-// Tipando a classe para que nao precise tipar o _nome e _poder antes do contrutor
+// Tipando a classe para que nao precise tipar o _nome e _poder antes do constructor
 interface Hero {
   _nome: string;
   _poder: string;
@@ -52,7 +52,7 @@ interface Hero {
 }
 
 class Hero {
-  // quando iniciar a classe, deve-se receber caracteristicas para que haja o funcionamento
+  // Quando iniciar a classe, deve-se receber caracteristicas para que haja o funcionamento
   constructor(nome: string, poder: string) {
     // usando o underline pois se esta criando as propriedades no contructor
     this._nome = nome;
@@ -64,9 +64,37 @@ class Hero {
   };
 };
 
-// Quando se for criar uma instacia reservada da classe, ussa-se o new
+// Quando se for criar uma instacia reservada da classe, usa-se o new
 const Hero01 = new Hero('Estudante', 'Estudar');
 const Hero02 = new Hero('Não Estudante', 'Não estudar');
 
 console.log(Hero01.fraseDoHero('Eu consigo!'));
 console.log(Hero02.fraseDoHero('Eu não consigo!'));
+
+// ===========================================================
+// Exercícios
+// 01. Crie uma classe cujo objeto represente um Cachorro;
+class Dog {
+  _name: string;
+  _color: string;
+  _age: number;
+
+  constructor(name: string, color: string, age: number) {
+    this._name = name;
+    this._color = color;
+    this._age = age;
+  }
+
+  bark(): void {
+    console.log("Au Au");
+  }
+}
+
+const dog01 = new Dog('Sabrina', '', 7).bark();
+const dog02 = new Dog('Alfredo', '', 1).bark();
+
+// 02. Crie uma classe cujo objeto represente uma Casa;
+
+
+// 03. Crie uma classe cujo objeto represente um Voo.
+
