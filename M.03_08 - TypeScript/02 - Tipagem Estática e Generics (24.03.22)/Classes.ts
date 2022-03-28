@@ -83,18 +83,44 @@ class Dog {
     this._name = name;
     this._color = color;
     this._age = age;
-  }
+  };
 
   bark(): void {
     console.log("Au Au");
-  }
+  };
 }
 
 const dog01 = new Dog('Sabrina', '', 7).bark();
 const dog02 = new Dog('Alfredo', '', 1).bark();
 
 // 02. Crie uma classe cujo objeto represente uma Casa;
+class House {
+  _owner: string;
+  _address: string;
+  _color: string;
+  _area: number;
 
+  constructor(owner: string, address: string, color: string, area: number) {
+    this._owner = owner;
+    this._address = address;
+    this._color = color;
+    this._area = area;
+  };
+};
 
 // 03. Crie uma classe cujo objeto represente um Voo.
+class Flight {
+  _origin: string;
+  _destination: string;
+  _departureDate: Date;
+  _arrivalDate: Date;
+  _passengers: number;
 
+  constructor(origin: string, destination: string, departureDate: Date, arrivalDate: Date, passengers: number) {
+    this._origin = origin;
+    this._destination = destination;
+    this._departureDate = departureDate;
+    this._arrivalDate = arrivalDate;
+    this._passengers = passengers;
+  };
+};
