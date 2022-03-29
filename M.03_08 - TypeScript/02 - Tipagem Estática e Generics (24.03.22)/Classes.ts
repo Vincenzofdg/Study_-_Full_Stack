@@ -44,7 +44,7 @@ person2.walk();
 // ===========================================================
 // USANDO O PLAYGROUND ==> https://www.typescriptlang.org/play
 
-// Tipando a classe para que nao precise tipar o _nome e _poder antes do constructor
+// Tipa"ndo a classe para que nao precise tipar o _nome e _poder antes do constructor
 interface Hero {
   _nome: string;
   _poder: string;
