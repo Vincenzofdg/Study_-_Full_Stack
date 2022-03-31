@@ -1,5 +1,5 @@
 // Cor dos Carros
-enum Colors {
+export enum Colors {
   BLACK = "Preta",
   WHITE = "Branca",
   RED = "Vermelha",
@@ -7,13 +7,13 @@ enum Colors {
 };
 
 // Possiveis Direções (Volante)
-enum Directions {
+export enum Directions {
   LEFT = "Esquerda",
   RIGHT = "Direita",
 };
 
 // Portas do Veiculo
-enum Doors {
+export enum Doors {
   DRIVER = "Da pessoa motorista",
   RIDE = "Da pessoa carona",
   BEHIND_DRIVER = "De trás da pessoa motorista",
@@ -21,11 +21,13 @@ enum Doors {
 };
 
 // Criação da Classe Carro
-class Car {
+export class Car {
+  _name: string;
   _color: Colors;
   _doors: number;
 
-  constructor(color: Colors, doors: number) {
+  constructor(name: string, color: Colors, doors: number) {
+    this._name = name;
     this._color = color;
     this._doors = doors;
   }
@@ -40,15 +42,3 @@ class Car {
   openTheDoor(door: Doors): void { console.log(`Abrindo a porta: ${door}.`) };
   closeTheDoor(door: Doors): void { console.log(`Fechando a porta: ${door}.`) };
 };
-
-const car01 = new Car(Colors.BLACK, 3);
-
-car01.turnOn();
-car01.turnOff();
-car01.turn(Directions.LEFT);
-car01.speedUp();
-car01.speedDown();
-car01.stop();
-car01.honk();
-car01.openTheDoor(Doors.DRIVER);
-car01.closeTheDoor(Doors.RIDE);
