@@ -1,0 +1,9 @@
+module.exports.name = require('./displayName');
+module.exports.categoryName = require('./categoryName');
+module.exports.email = require('./email');
+module.exports.password = require('./password');
+module.exports.token = require('./token');
+module.exports.title = require('./title');
+module.exports.content = require('./content');
+module.exports.categoryIds = require('./categoryIds');
+module.exports.userToken = require('./userToken');

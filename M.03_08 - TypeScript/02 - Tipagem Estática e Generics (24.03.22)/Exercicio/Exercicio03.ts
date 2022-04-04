@@ -1,11 +1,13 @@
 type Slice = 4 | 6 | 8;
 
-interface Pizza {
+export interface IPizza {
   _flavor: string,
   _slice: Slice
 }
 
-class Pizza {
+export class Pizza implements IPizza {
+  _flavor: string;
+  _slice: Slice;
   constructor(flavor: string, slice: Slice) {
     this._flavor = flavor;
     this._slice = slice;
