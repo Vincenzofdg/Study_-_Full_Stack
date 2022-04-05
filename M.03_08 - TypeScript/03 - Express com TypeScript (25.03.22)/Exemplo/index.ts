@@ -1,6 +1,7 @@
-import express, { Request, Response } from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import 'express-async-errors';
+import BooksRoutes from './routes/books.routes';
 
 const app = express();
 
@@ -12,7 +13,7 @@ app.get('/', (req: Request, res: Response) => res.status(StatusCodes.OK).send('E
 
 app.use((err: Error , req: Request, res: Response, next: NextFunction) => {
   const { name, message, details } = err as any;
-  console.log(`name: ${name}`);
+  console.log('name: {name}');
 
   switch(name) {
     case 'ValidationError':
@@ -32,4 +33,4 @@ app.use((err: Error , req: Request, res: Response, next: NextFunction) => {
   next()
 });
 
-app.listen(PORT, () => console.log(`Server is running at http://localhost:${PORT}`));
+app.listen(PORT, () => console.log('Server is running at http://localhost:{PORT}'));
