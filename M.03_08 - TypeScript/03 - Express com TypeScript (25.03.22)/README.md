@@ -52,3 +52,4 @@ app.listen(PORT, () => console.log(`Server is running at http://localhost:${PORT
 
 11. Instalar uma lib que faz o tratamento de erros disparar diretamente o middleware de erro sem a nescessidade de colocar try/catch
 - `npm install express-async-errors`
+12. `npm install restify-errors @types/restify-errors`
