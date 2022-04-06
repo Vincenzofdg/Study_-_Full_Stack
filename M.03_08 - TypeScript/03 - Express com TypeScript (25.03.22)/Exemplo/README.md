@@ -17,3 +17,12 @@
 6. Criar a connection `./models/connection.ts`:
 - instalar o `mysql2` `dotenv`.
 7. Crie `./models/book.model.ts`
+
+### Dica de Contrução:
+
+Implemente rotas no seu codigo pela seguinte seguencia:
+
+1. Implementar a Rota
+2. Models
+3. Services
+4. Controllers

@@ -1,28 +1,43 @@
-import { Pool, ResultSetHeader } from 'mysql2/promise';
+import { Pool, ResultSetHeader, RowDataPacket } from 'mysql2/promise';
 import Book from '../interfaces/book.interface';
 
 export default class BookModel {
-  public connection: Pool;
+  public myConnection: Pool;
 
   constructor(connection: Pool) {
-    this.connection = connection;
+    this.myConnection = connection;
   }
 
   public async getAll(): Promise<Book[]> {
-    const result = await this.connection
-      .execute('SELECT * FROM books');
-    const [rows] = result;
-    return rows as Book[];
+    const [result] = await this.myConnection.execute<RowDataPacket[]>('SELECT * FROM books');
+    return result as Book[];
   }
 
+  public async getById(id: number): Promise<Book> {
+    const [result] = await this.myConnection.execute('SELECT * FROM books WHERE id=?', [id]);
+    const [book] = result as Book[];
+    return book;
+  }
+  
   public async create(book: Book): Promise<Book> {
     const { title, price, author, isbn } = book;
-    const result = await this.connection.execute<ResultSetHeader>(
+    const [result] = await this.myConnection.execute<ResultSetHeader>(
       'INSERT INTO books (title, price, author, isbn) VALUES (?, ?, ?, ?)',
       [title, price, author, isbn],
     );
-    const [dataInserted] = result;
-    const { insertId } = dataInserted;
+    const { insertId } = result;
     return { id: insertId, ...book };
+  }
+
+  public async update(id: number, book: Book) {
+    const { title, price, author, isbn } = book;
+    await this.myConnection.execute(
+      'UPDATE books SET title=?, price=?, author=?, isbn=? WHERE id=?',
+      [title, price, author, isbn, id]
+    );
+  }
+
+  public async remove(id: number) {
+    await this.myConnection.execute('DELETE FROM books WHERE id=?', [id]);
   }
 }

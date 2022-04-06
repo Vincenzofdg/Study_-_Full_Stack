@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "940221e9-2828-46e4-aba4-699cd5d6c254",
+		"name": "Project: BlogAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Route /user",
+			"item": [
+				{
+					"name": "Create a User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"displayName\": \"vincenzofdg\",\n  \"email\": \"vincenzo@email.com\",\n  \"password\": \"mypassword\",\n  \"image\": \"http://4.bp.blogspot.com/_YA50adQ-7vQ/S1gfR_6ufpI/AAAAAAAAAAk/1ErJGgRWZDg/S45/brett.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ":3000/user",
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJkaXNwbGF5TmFtZSI6IlZpbmNlbnpvZmRnIiwiZW1haWwiOiJ2aW5jZW56b0BlbWFpbC5jb20iLCJwYXNzd29yZCI6Im15cGFzc3dvcmQiLCJpbWFnZSI6Imh0dHA6Ly80LmJwLmJsb2dzcG90LmNvbS9fWUE1MGFkUS03dlEvUzFnZlJfNnVmcEkvQUFBQUFBQUFBQWsvMUVySkdnUldaRGcvUzQ1L2JyZXR0LnBuZyJ9LCJpYXQiOjE2NDc3MDM4MzUsImV4cCI6MTY0ODMwODYzNX0.H1mLly_rGMwB1ivVfEn6hiClbITqwRXkeOeQ7_Ql8I0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": ":3000/user",
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJkaXNwbGF5TmFtZSI6IlZpbmNlbnpvZmRnIiwiZW1haWwiOiJ2aW5jZW56b0BlbWFpbC5jb20iLCJwYXNzd29yZCI6Im15cGFzc3dvcmQiLCJpbWFnZSI6Imh0dHA6Ly80LmJwLmJsb2dzcG90LmNvbS9fWUE1MGFkUS03dlEvUzFnZlJfNnVmcEkvQUFBQUFBQUFBQWsvMUVySkdnUldaRGcvUzQ1L2JyZXR0LnBuZyJ9LCJpYXQiOjE2NDc3MDM4MzUsImV4cCI6MTY0ODMwODYzNX0.H1mLly_rGMwB1ivVfEn6hiClbITqwRXkeOeQ7_Ql8I0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": ":3000/user/2",
+							"port": "3000",
+							"path": [
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Route /login",
+			"item": [
+				{
+					"name": "Login in with Email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"vincenzo@email.com\",\n    \"password\": \"mypassword\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ":3000/login",
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Route /categories",
+			"item": [
+				{
+					"name": "Add a Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJkaXNwbGF5TmFtZSI6IlZpbmNlbnpvZmRnIiwiZW1haWwiOiJ2aW5jZW56b0BlbWFpbC5jb20iLCJwYXNzd29yZCI6Im15cGFzc3dvcmQiLCJpbWFnZSI6Imh0dHA6Ly80LmJwLmJsb2dzcG90LmNvbS9fWUE1MGFkUS03dlEvUzFnZlJfNnVmcEkvQUFBQUFBQUFBQWsvMUVySkdnUldaRGcvUzQ1L2JyZXR0LnBuZyJ9LCJpYXQiOjE2NDc3MDM4MzUsImV4cCI6MTY0ODMwODYzNX0.H1mLly_rGMwB1ivVfEn6hiClbITqwRXkeOeQ7_Ql8I0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Uma nova Categoria\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ":3000/categories",
+							"port": "3000",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Categories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJkaXNwbGF5TmFtZSI6IlZpbmNlbnpvZmRnIiwiZW1haWwiOiJ2aW5jZW56b0BlbWFpbC5jb20iLCJwYXNzd29yZCI6Im15cGFzc3dvcmQiLCJpbWFnZSI6Imh0dHA6Ly80LmJwLmJsb2dzcG90LmNvbS9fWUE1MGFkUS03dlEvUzFnZlJfNnVmcEkvQUFBQUFBQUFBQWsvMUVySkdnUldaRGcvUzQ1L2JyZXR0LnBuZyJ9LCJpYXQiOjE2NDc3MDM4MzUsImV4cCI6MTY0ODMwODYzNX0.H1mLly_rGMwB1ivVfEn6hiClbITqwRXkeOeQ7_Ql8I0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Vincenzofdg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ":3000/categories",
+							"port": "3000",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Route /post",
+			"item": [
+				{
+					"name": "Create a New Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidmluY2Vuem9AZW1haWwuY29tIiwicGFzc3dvcmQiOiJteXBhc3N3b3JkIn0sImlhdCI6MTY0NzgwNDYzNywiZXhwIjoxNjQ4NDA5NDM3fQ.Yqpd8H9E1pZo9PWSq-N2CpGmjOR8_Ez_ghvMr62EfPE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Latest updates, August 1st\",\n  \"content\": \"The whole text for the blog post goes here in this key\",\n  \"categoryIds\": [1, 2]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ":3000/post",
+							"port": "3000",
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edite post by ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJkaXNwbGF5TmFtZSI6IlZpbmNlbnpvZmRnIiwiZW1haWwiOiJ2aW5jZW56b0BlbWFpbC5jb20iLCJwYXNzd29yZCI6Im15cGFzc3dvcmQiLCJpbWFnZSI6Imh0dHA6Ly80LmJwLmJsb2dzcG90LmNvbS9fWUE1MGFkUS03dlEvUzFnZlJfNnVmcEkvQUFBQUFBQUFBQWsvMUVySkdnUldaRGcvUzQ1L2JyZXR0LnBuZyJ9LCJpYXQiOjE2NDc3MDM4MzUsImV4cCI6MTY0ODMwODYzNX0.H1mLly_rGMwB1ivVfEn6hiClbITqwRXkeOeQ7_Ql8I0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Latest updates, August 1st\",\n  \"content\": \"The whole text for the blog post goes here in this key\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ":3000/post/3",
+							"port": "3000",
+							"path": [
+								"post",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Posts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJkaXNwbGF5TmFtZSI6IlZpbmNlbnpvZmRnIiwiZW1haWwiOiJ2aW5jZW56b0BlbWFpbC5jb20iLCJwYXNzd29yZCI6Im15cGFzc3dvcmQiLCJpbWFnZSI6Imh0dHA6Ly80LmJwLmJsb2dzcG90LmNvbS9fWUE1MGFkUS03dlEvUzFnZlJfNnVmcEkvQUFBQUFBQUFBQWsvMUVySkdnUldaRGcvUzQ1L2JyZXR0LnBuZyJ9LCJpYXQiOjE2NDc3MDM4MzUsImV4cCI6MTY0ODMwODYzNX0.H1mLly_rGMwB1ivVfEn6hiClbITqwRXkeOeQ7_Ql8I0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": ":3000/post",
+							"port": "3000",
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find a post by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJkaXNwbGF5TmFtZSI6IlZpbmNlbnpvZmRnIiwiZW1haWwiOiJ2aW5jZW56b0BlbWFpbC5jb20iLCJwYXNzd29yZCI6Im15cGFzc3dvcmQiLCJpbWFnZSI6Imh0dHA6Ly80LmJwLmJsb2dzcG90LmNvbS9fWUE1MGFkUS03dlEvUzFnZlJfNnVmcEkvQUFBQUFBQUFBQWsvMUVySkdnUldaRGcvUzQ1L2JyZXR0LnBuZyJ9LCJpYXQiOjE2NDc3MDM4MzUsImV4cCI6MTY0ODMwODYzNX0.H1mLly_rGMwB1ivVfEn6hiClbITqwRXkeOeQ7_Ql8I0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": ":3000/post/2",
+							"port": "3000",
+							"path": [
+								"post",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
