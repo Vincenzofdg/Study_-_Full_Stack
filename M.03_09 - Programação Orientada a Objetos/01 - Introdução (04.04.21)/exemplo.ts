@@ -1,4 +1,3 @@
-// Para Fixar
 // 01. Crie uma classe chamada Tv, com os atributos:
 // - brand: marca da TV;
 // - size: tamanho em polegadas;
@@ -26,13 +25,30 @@ class Tv {
 		this._size = b;
 		this._resolution = c;
 		this._connections = d;
+		this._connectedTo = '';
 	}
 
 	turnOn(): void {
 		const { _brand, _size, _resolution, _connections } = this
 		console.log(`Tv: ${_brand}, ${_size}\nResolution: ${_resolution}\nConnections: ${_connections.join(', ')}`)
 	}
+
+	get connectedTo(): string {
+		return this._connectedTo;
+	}
+
+	set connectedTo(value: string) {
+	    if (this._connections.includes(value)) {
+			this._connectedTo = value;
+			console.log(this._connectedTo);
+	    } else {
+			console.log('Sorry, connection unavailable!');
+	    }
+	}
 }
 
 const myTV = new Tv('LG', 32, 'HD', ['HDMI', 'Ethernet', 'Wifi']);
 myTV.turnOn();
+
+myTV.connectedTo = 'Ethernet';
+myTV.connectedTo;
