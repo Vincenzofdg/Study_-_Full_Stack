@@ -51,4 +51,4 @@ const myTV = new Tv('LG', 32, 'HD', ['HDMI', 'Ethernet', 'Wifi']);
 myTV.turnOn();
 
 myTV.connectedTo = 'Ethernet';
-myTV.connectedTo;
+console.log('Connected to: ', myTV.connectedTo);
