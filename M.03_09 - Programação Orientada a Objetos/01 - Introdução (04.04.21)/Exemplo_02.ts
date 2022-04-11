@@ -107,15 +107,11 @@ personalMailList.addEmail(email6);
 personalMailList.addEmail(email05); // Adicionado erroneamente
 
 console.log('------ personalMailList.getBySubject(\'Day off\'):');
-personalMailList.getBySubject('Day off').forEach(
-  (mail) => console.log(mail.content)
-);
+personalMailList.getBySubject('Day off').forEach((mail) => console.log(mail.content));
 personalMailList.removeEmail(email05);
 
 console.log('------ professionalMailList.all:');
 professionalMailList.all.forEach((mail) => console.log(mail.content));
 
 console.log('------ personalMailList.all:');
-personalMailList.all.forEach(
-  (mail) => console.log(mail.content)
-);
+personalMailList.all.forEach((mail) => console.log(mail.content));
