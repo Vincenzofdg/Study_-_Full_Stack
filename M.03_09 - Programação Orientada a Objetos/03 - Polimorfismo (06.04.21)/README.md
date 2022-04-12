@@ -1,1 +1,1 @@
-README
+Polimorfismo vem do grego muitas formas, e nos remete às várias formas que um mesmo método pode possuir. A assinatura de uma função (ou método) corresponde ao nome da função, seu tipo de retorno, o nome dos argumentos e seus tipos.
