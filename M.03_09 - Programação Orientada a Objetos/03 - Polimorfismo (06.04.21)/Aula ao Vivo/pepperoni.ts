@@ -11,16 +11,16 @@ export default class Pepperoni extends Pizza {
     }));
     this.extra.border = true;
   }
+
   public makePizza(): void {
     console.log(`Making Pepperoni's pizza with size ${this._size}`);
   }
+
   public printPrice(): void {
-    console.log(
-      `Price is: ${
-        this._pricePerSize.find((p) => p.size === this._size)?.price
-      } ${this._ingredients}`,
-    );
+    console.log(`Price is: ${this._pricePerSize.find((p) => p.size === this._size)?.price} ${this._ingredients}`);
   }
+
+  // Se nao é dependente da classe (utilizando o this.) coloque o static
   public static showOff(): void {
     console.log('Peppero the BEST PIZZA EVERRRR');
   }
