@@ -1,4 +1,4 @@
-![trybe_banner](./banner.jpeg)
+![trybe_banner](./banner.jpg)
  
 <h3 align="center"><strong>Curso realizado em: 2021 - 2022. || Turma(s): 14a e 15b</strong></h3>
 <p align="center">A Trybe é uma escola de desenvolvimento web que oferece mais de 1500 horas de formação abordando fundamentos de desenvolvimento web, desenvolvimento Front e Back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais.</p>
