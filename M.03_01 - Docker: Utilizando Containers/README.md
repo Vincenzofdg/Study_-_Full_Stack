@@ -7,7 +7,7 @@
 <p><samp>Dockerfile</samp></p>
 
 ```
-FROM alpine:3.14								# Imagem base mínima (5.59MB)
+FROM alpine:3.14							# Imagem base mínima (5.59MB)
 CMD ["echo", "Sou pessoa estudante da Trybe!"]	# Executa comando "echo"
 
 ```
