@@ -53,6 +53,7 @@ const lp = new LegalPerson('International Sales SA', '834729384723');
 const showIdentification = (person: Person) => {
   person.showIdentification();
 }
+
 showIdentification(john);   // 0 123456789
 showIdentification(jenny);  // 1 987654321
 showIdentification(lp);     // 0 834729384723
