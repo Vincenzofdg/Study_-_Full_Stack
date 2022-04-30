@@ -1,0 +1,5 @@
+- **`S` ingle responsibility principle (Princípio da responsabilidade única):** Uma entidade (classe, método, função, etc) deve ter apenas uma única responsabilidade;
+- **`O` pen/Closed principle (Princípio aberto/fechado):** Entidades de software devem ser abertas para extensão, mas fechadas para modificação;
+- **`L` iskov substitution principle (Princípio de substituição de Liskov):** Objetos em um programa devem ser substituíveis por instâncias de seus subtipos, sem alterar a funcionalidade do programa;
+- **`I` nterface segregation principle (Princípio da segregação da interface):** Muitas interfaces de clientes específicas são melhores do que uma para todos os propósitos;
+- **`D` ependency inversion principle ( Princípio da inversão da dependência):** Entidades de alto nível não devem depender de entidades de baixo nível. Ambos devem depender de abstrações.
