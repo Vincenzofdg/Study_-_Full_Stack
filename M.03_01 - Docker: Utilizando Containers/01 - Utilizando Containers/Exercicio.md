@@ -37,7 +37,7 @@ R: docker ps -a
 
 R: docker ps -l
 
-1. Inicie o mesmo container novamente, sem criar outro. Valide se ele está ativo na lista de containers.
+8. Inicie o mesmo container novamente, sem criar outro. Valide se ele está ativo na lista de containers.
 
 R: docker container start <container_ID> (Container Iniciará e logo parará)
 
@@ -49,6 +49,10 @@ R: docker container attach <container_ID> (Entrará no Container)
 
 R: docker container rm <container_ID>
 
-10. Crie e rode no modo interativo e depois exclua o container (Cleanup), a imagem _andrius/ascii-patrol_. (R: docker container run -it --rm andrius/ascii-patrol)
+11. Crie um Container com a latest image do Ubuntu e deixe rodando em segundo plano.
+
+R: docker container run -dit ubuntu
+
+12.  Crie e rode no modo interativo e depois exclua o container (Cleanup), a imagem _andrius/ascii-patrol_.
 
 R: docker container run -ti --rm andrius/ascii-patrol (ctrl + c para encerrar)
