@@ -1,27 +1,54 @@
-1. No Docker Hub, utilizando a caixa de busca ("Search for great content"), busque pela imagem da Distribuição Linux Debian;
+1. No Docker Hub, utilizando a caixa de busca, busque pela imagem da Distribuição Linux Debian.
 
-2. Uma vez que encontrar a imagem oficial, acesse-a (clicando em seu card) e verifique na página de detalhes, se existe algum comando para baixarmos a imagem localmente sem ter que criar um container para isso;
+R: [Link](https://hub.docker.com/_/debian) | debian:stable
 
-3. Baixe a imagem utilizando a tag:stable-slim, que é uma versão reduzida da distribuição; (R: docker pull debian:stable-slim)
+2. Baixe a imagem, com a tag stable-slim,  localmente sem ter que criar um container para isso.
 
-4. Após baixar a imagem para seu computador local, crie e execute um container no modo interativo utilizando essa imagem como referência (não esqueça referenciar a tag); (R: docker container run -it debian:stable-slim)
+R: docker pull debian:stable-slim
 
-5. No terminal, você deve conseguir rodar o comando cat /etc/*-release, que vai retornar os dados da distribuição Debian que está sendo rodada dentro do container;
+3. Execute um container no modo interativo utilizando essa imagem como referência.
+ 
+R: docker container run -it debian:stable-slim
 
-6. Encerre o terminal;
+4. No terminal, execute o comando cat /etc/*-release. Qual o retorno?
 
-7. Verifique na sua lista de containers, qual o container é referente ao exercício que acabou de praticar;
+R:
+```sh
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+```
 
-8. Inicie o mesmo container novamente, sem criar outro. Valide se ele está ativo na lista de containers; (R: docker container start fa867d19b3da)
+5. Encerre o terminal.
 
-9. Retome o container que foi criado anteriormente nesse exercício; (R: docker container attach fa867d19b3da)
+R: exit
 
-10. Rode o comando cat /etc/debian_version que deve retornar a versão atual do sistema do container;
+6. Verifique na lista de o container criado.
 
-11. Encerre o terminal;
+R: docker ps -a
 
-12. Remova somente o container criado para esse exercício;
+7. Liste o ultimo container criado.
 
-13. (Bônus) Crie e rode de modo interativo em modo 'Cleanup', a imagem andrius/ascii-patrol; (R: docker container run -it --rm andrius/ascii-patrol)
+R: docker ps -l
 
-14. (Bônus) Encerre o container utilizando os botões [ ctrl ] + [ c ].
+1. Inicie o mesmo container novamente, sem criar outro. Valide se ele está ativo na lista de containers.
+
+R: docker container start <container_ID> (Container Iniciará e logo parará)
+
+9. Retome o container que foi criado anteriormente nesse exercício.
+
+R: docker container attach <container_ID> (Entrará no Container)
+
+10.  Remova o container criado;
+
+R: docker container rm <container_ID>
+
+10. Crie e rode no modo interativo e depois exclua o container (Cleanup), a imagem _andrius/ascii-patrol_. (R: docker container run -it --rm andrius/ascii-patrol)
+
+R: docker container run -ti --rm andrius/ascii-patrol (ctrl + c para encerrar)
