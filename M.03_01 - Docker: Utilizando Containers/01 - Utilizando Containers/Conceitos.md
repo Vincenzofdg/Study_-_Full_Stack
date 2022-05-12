@@ -18,7 +18,7 @@ Eemplo o próprio sistema operacional Ubuntu possui uma imagem oficial no Docker
 
 ## Fluxo Padrão
 
-![image](fluxo.png)
+![image](./.imgs/fluxo.png)
 
 **1º Tudo começa no arquivo Dockerfile**
 
@@ -35,9 +35,3 @@ Eemplo o próprio sistema operacional Ubuntu possui uma imagem oficial no Docker
 **3º Rodar a imagem do container com o comando `run`**
 
 	. Dizer ao container o que deve acontecer, permanecer ativo ou não (caso o contrário o container é encerrado).
-
-
-
-DUVIDAS:
-
-01 UMA IMAGEM É SERIA UMA MAQUINA VIRTUAL ENTAO?
