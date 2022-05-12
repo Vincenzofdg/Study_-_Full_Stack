@@ -25,4 +25,3 @@
 13. (Bônus) Crie e rode de modo interativo em modo 'Cleanup', a imagem andrius/ascii-patrol; (R: docker container run -it --rm andrius/ascii-patrol)
 
 14. (Bônus) Encerre o container utilizando os botões [ ctrl ] + [ c ].
-
