@@ -22,5 +22,6 @@ Muito utilizada em imagens do Docker por ser uma distribuição que possui somen
 - `EXPOSE`: Expoem a porta na qual a aplicação rodará no container (Ex.: EXPOSE 3000))
 - `CMD`: Executa um comando quando o container é iniciado (Ex.: CMD ["/bin/echo", "Hello World"])
 - `ENTRYPOINT`: CMD pode ser sobrescrito ja o ENTRYPOINT não.
-  - Ex.: ENTRYPOINT ["/bin/echo"]
-         CMD ["Hello World"] 
+  - Ex.:
+    - ENTRYPOINT ["/bin/echo"]
+    - CMD ["Hello World"] 
