@@ -44,3 +44,14 @@ CMD ["npm", "run", "dev"]
 <hr />
 
 ### Com docker-compose.yml
+
+1. Criar o arquivo, contendo:
+```
+version: '3.9'
+services:
+  build: ./
+  volumes:
+    - ./:/app
+  ports:
+    - 3000:3000
+```
