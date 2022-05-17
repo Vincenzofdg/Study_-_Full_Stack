@@ -18,7 +18,7 @@ Muito utilizada em imagens do Docker por ser uma distribuição que possui somen
 ## Dockerfile Dicionário
 - `WORKDIR`: Diretorio onde iremos trabalhar dentro do container (Ex.: WORKDIR /app);
 - `COPY`: Arquivos que serão copiados para dentro do container (Ex.: COPY ["<File_01>","<File_02>",...,"<File_N>", "<Destino>"])
-- `RUN`: Executa um comandop durante a build da imagem (Ex.: RUN ["<sudo>", "<apt>", "<update>", "<-y>"])
+- `RUN`: Executa um comando durante a build da imagem (Ex.: RUN ["<sudo>", "<apt>", "<update>", "<-y>"])
 - `EXPOSE`: Expoem a porta na qual a aplicação rodará no container (Ex.: EXPOSE 3000))
 - `CMD`: Executa um comando quando o container é iniciado (Ex.: CMD ["/bin/echo", "Hello World"])
 - `ENTRYPOINT`: CMD pode ser sobrescrito ja o ENTRYPOINT não.
