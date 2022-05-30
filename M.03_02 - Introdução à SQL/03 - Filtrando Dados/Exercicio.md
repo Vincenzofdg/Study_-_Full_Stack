@@ -1,5 +1,4 @@
 ## Parte 01
-
 ```sh
 DROP SCHEMA IF EXISTS PecasFornecedores;
 CREATE SCHEMA PecasFornecedores;
@@ -66,39 +65,37 @@ INSERT INTO Vendas(fornecimento, quantity, order_date)
     (9, 5, '2020-05-13 14:05:19');
 ```
 
-
-01. Escreva uma query para exibir todas as peças que começam com GR.
-```sh
+1. Escreva uma query para exibir todas as peças que começam com GR.
+```
 SELECT * FROM PecasFornecedores.Pecas WHERE name LIKE 'GR%';
 ```
-02. Escreva uma query para exibir todos os fornecimentos que contenham a peça com code 2. Organize o resultado por ordem alfabética de fornecedor.
-```sh
+2. Escreva uma query para exibir todos os fornecimentos que contenham a peça com code 2. Organize o resultado por ordem alfabética de fornecedor.
+```
 SELECT * FROM PecasFornecedores.Fornecimentos WHERE code = 2 ORDER BY Fornecedor ASC;
 ```
-03. Escreva uma query para exibir as peças, preço e fornecedor de todos os fornecimentos em que o código do fornecedor tenha a letra N.
-```sh
+3. Escreva uma query para exibir as peças, preço e fornecedor de todos os fornecimentos em que o código do fornecedor tenha a letra N.
+```
 SELECT peca, Preco, Fornecedor FROM PecasFornecedores.Fornecimentos WHERE Fornecedor LIKE '%N%';
 ```
-04. Escreva uma query para exibir todas as informações dos fornecedores que são empresas limitadas (LTDA). Ordene os resultados em ordem alfabética decrescente.
-```sh
+4. Escreva uma query para exibir todas as informações dos fornecedores que são empresas limitadas (LTDA). Ordene os resultados em ordem alfabética decrescente.
+```
 SELECT * FROM PecasFornecedores.Fornecedores WHERE name LIKE '%LTDA%' ORDER BY name DESC;
 ```
-05. Escreva uma query para exibir o número de empresas (fornecedores) que contém a letra F no código.
-```sh
+5. Escreva uma query para exibir o número de empresas (fornecedores) que contém a letra F no código.
+```
 SELECT COUNT(*) FROM PecasFornecedores.Fornecimentos WHERE Fornecedor LIKE '%F%';
 ```
-06. Escreva uma query para exibir os fornecimentos onde as peças custam mais de R$15,00 e menos de $40,00. Ordene os resultados por ordem crescente.
-```sh
+6. Escreva uma query para exibir os fornecimentos onde as peças custam mais de R$15,00 e menos de $40,00. Ordene os resultados por ordem crescente.
+```
 SELECT * FROM PecasFornecedores.Fornecimentos WHERE Preco BETWEEN 15 AND 40 ORDER BY Preco;
 ```
-07. Escreva uma query para exibir o número de vendas feitas entre o dia 15/04/2018 e o dia 30/07/2019.
-```sh
+7. Escreva uma query para exibir o número de vendas feitas entre o dia 15/04/2018 e o dia 30/07/2019.
+```
 SELECT * FROM PecasFornecedores.Vendas WHERE DATE(order_date) BETWEEN '2018-04-15' AND '2019-07-30';
 ```
 
 ## Parte 02
-
-```SH
+```sh
 DROP SCHEMA IF EXISTS Scientists;
 CREATE SCHEMA Scientists;
 USE Scientists;
@@ -169,37 +166,35 @@ INSERT INTO Scientists(SSN, Name)
     (332569843, 'AeH4');
 ```
 
-
-01. Escreva uma query para exibir todas as informações de todos os cientistas que possuam a letra 'e' em seu nome.
-```sh
+1. Escreva uma query para exibir todas as informações de todos os cientistas que possuam a letra 'e' em seu nome.
+```
 SELECT * FROM Scientists.Scientists WHERE Name LIKE '%e%';
 ```
-02. Escreva uma query para exibir o nome de todos os projetos cujo o código inicie com a letra A. Ordene o resultado em ordem alfabética.
-```sh
+2. Escreva uma query para exibir o nome de todos os projetos cujo o código inicie com a letra A. Ordene o resultado em ordem alfabética.
+```
 SELECT Name FROM Scientists.Projects WHERE Code LIKE 'A%' ORDER BY Name ASC;
 ```
-03. Escreva uma query para exibir o código e nome de todos os projetos que possuam em seu código o número 3. Ordene o resultado em ordem alfabética.
-```sh
+3. Escreva uma query para exibir o código e nome de todos os projetos que possuam em seu código o número 3. Ordene o resultado em ordem alfabética.
+```
 SELECT Code, Name FROM Scientists.Projects WHERE Code LIKE '%3%';
 ```
-04. Escreva uma query para exibir todos os cientistas (valores numéricos) cujos projetos sejam AeH3, Ast3 ou Che1.
-```sh
+4. Escreva uma query para exibir todos os cientistas (valores numéricos) cujos projetos sejam AeH3, Ast3 ou Che1.
+```
 SELECT Scientist FROM Scientists.AssignedTo WHERE Project IN('AeH3', 'Ast3', 'Che1');
 ```
-05. Escreva uma query para exibir todas as informações de todos os projetos com mais de 500 horas.
-```sh
+5. Escreva uma query para exibir todas as informações de todos os projetos com mais de 500 horas.
+```
 SELECT * FROM Scientists.Projects WHERE Hours > 500;
 ```
-06. Escreva uma query para exibir todas as informações de todos os projetos cujas horas sejam maiores que 250 e menores 800.
-```sh
+6. Escreva uma query para exibir todas as informações de todos os projetos cujas horas sejam maiores que 250 e menores 800.
+```
 SELECT * FROM Scientists.Projects WHERE Hours BETWEEN 250 AND 800;
 ```
-07. Escreva uma query para exibir o nome e o código de todos os projetos cujo nome NÃO inicie com a letra A.
-```sh
+7. Escreva uma query para exibir o nome e o código de todos os projetos cujo nome NÃO inicie com a letra A.
+```
 SELECT * FROM Scientists.Projects WHERE Name NOT LIKE 'A%';
 ```
-08. Escreva uma query para exibir o nome de todos os projetos cujo código contenha a letra H.
-```sh
+8. Escreva uma query para exibir o nome de todos os projetos cujo código contenha a letra H.
+```
 SELECT Name FROM Scientists.Projects WHERE Code LIKE '%H%';
 ```
-
