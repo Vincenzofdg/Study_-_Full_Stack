@@ -34,14 +34,15 @@ INSERT INTO sakila.actor (first_name, last_name)
 1. Insira um novo funcionário na tabela sakila.staff.
 ```sh
 INSERT INTO sakila.staff (first_name, last_name, address_id, email, store_id, active, username, password)
-VALUES ('Vincenzo', 'Di Giacomo', 2, 'vincenzofdg@hotmail.com', 1, 1, 'VFDGiacomo', 'vince2022');
+    VALUES
+        ('Vincenzo', 'Di Giacomo', 2, 'vincenzofdg@hotmail.com', 1, 1, 'VFDGiacomo', 'vince2022');
 ```
 2. Feito o exercício anterior, vamos agora para o nível 2. Insira dois funcionários novos em apenas uma _query_.
 ```sh
 INSERT INTO sakila.staff (first_name, last_name, address_id, email, store_id, active, username, password)
-VALUES 
-	('Ricardo', 'Silva', 5, '', 1, 1, 'riki', ''),
-	('Charlie', 'Reis', 6, 'chaliereis@fakemail.com', 1, 1, 'charl', 'charlie213');
+    VALUES 
+	    ('Ricardo', 'Silva', 5, '', 1, 1, 'riki', ''),
+	    ('Charlie', 'Reis', 6, 'chaliereis@fakemail.com', 1, 1, 'charl', 'charlie213');
 ```
 3. Selecione os cinco primeiros nomes e sobrenomes da tabela sakila.customer e cadastre essas pessoas como atores na tabela sakila.actor.
 ```sh
@@ -53,15 +54,16 @@ INSERT INTO sakila.actor (first_name, last_name)
 4. Cadastre três categorias de uma vez só na tabela sakila.category.
 ```sh
 INSERT INTO sakila.category (category_id, name)
-VALUES
-	(17, 'CATEGORIA01'),
-    (18, 'CATEGORIA02'),
-    (19, 'CATEGORIA03');
+    VALUES
+        (17, 'CATEGORIA01'),
+        (18, 'CATEGORIA02'),
+        (19, 'CATEGORIA03');
 ```
 5. Cadastre uma nova loja na tabela sakila.store .
 ```sh
 INSERT INTO sakila.store (manager_staff_id, address_id)
-VALUES (3, 3);
+    VALUES
+        (3, 3);
 ```
 
 
