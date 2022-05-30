@@ -1,4 +1,4 @@
-**Comandos mais Usados:** `SELECT`, `UPDATE`, `DELETE`, `INSERT`, `WHERE`, ... etc
+**Comandos mais Usados:** `SELECT`, `UPDATE`, `DELETE`, `INSERT`, `WHERE`
 
 Por convenção, utilizamos as palavras chave do SQL em caixa alta para diferenciar das indicações de tabelas e colunas. Lembre-se sempre usar o _;_ no final de cada comando.
 
