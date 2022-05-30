@@ -11,10 +11,10 @@ INSERT INTO nome_tabela (coluna1, coluna2) VALUES ('valor_coluna1', 'valor_colun
 INSERT INTO nome_tabela (coluna1, coluna2) VALUES ('valor_1','valor_2'), ('valor_3','valor_4'), ('valor_5','valor_6');
 ```
 
-## INSERT IGNORE
+### INSERT IGNORE
 Ignore os erros e pule os dados problemáticos, que normalmente interromperiam a query em função de alguma restrição imposta na tabela.
 
-## INSERT SELECT
+### INSERT SELECT
 Inserindo dados de uma outra tabela. Exemplo:
 ```
 INSERT INTO tabelaA (coluna1, coluna2)
@@ -30,7 +30,7 @@ INSERT INTO sakila.actor (first_name, last_name)
     SELECT first_name, last_name FROM sakila.staff;
 ```
 
-## Exercicio
+### Exercicio
 1. Insira um novo funcionário na tabela sakila.staff.
 ```sh
 INSERT INTO sakila.staff (first_name, last_name, address_id, email, store_id, active, username, password)
