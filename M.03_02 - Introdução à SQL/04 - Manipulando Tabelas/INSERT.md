@@ -1,25 +1,22 @@
- - **Crase (``):** São usadas para identificar nome de tabelas e colunas. São necessárias apenas quando o identificador for uma palavra reservada do MySQL, ou quando o nome da tabela ou coluna contiver espaços em branco.
- 
- - **Aspas simples (''):** Devem ser usadas em valores do tipo string.
+**Crase (``):** São usadas para identificar nome de tabelas e colunas. São necessárias apenas quando o identificador for uma palavra reservada do MySQL, ou quando o nome da tabela ou coluna contiver espaços em branco.
 
-**Inserindo uma linha:** INSERT INTO nome_tabela (coluna1, coluna2) VALUES ('valor_coluna1', 'valor_coluna2');
+**Aspas simples (''):** Devem ser usadas em valores do tipo string.
 
+**Inserindo uma linha:**
+```
+INSERT INTO nome_tabela (coluna1, coluna2) VALUES ('valor_coluna1', 'valor_coluna2');
+```
 **Inserindo mais de uma linha:**
-```sh
-INSERT INTO nome_tabela (coluna1, coluna2) VALUES
-('valor_1','valor_2'),
-('valor_3','valor_4'),
-('valor_5','valor_6');
+```
+INSERT INTO nome_tabela (coluna1, coluna2) VALUES ('valor_1','valor_2'), ('valor_3','valor_4'), ('valor_5','valor_6');
 ```
 
 ## INSERT IGNORE
-
 Ignore os erros e pule os dados problemáticos, que normalmente interromperiam a query em função de alguma restrição imposta na tabela.
 
 ## INSERT SELECT
-
 Inserindo dados de uma outra tabela. Exemplo:
-```sh
+```
 INSERT INTO tabelaA (coluna1, coluna2)
     SELECT tabelaB.coluna1, tabelaB.coluna2
     FROM tabelaB
@@ -33,8 +30,7 @@ INSERT INTO sakila.actor (first_name, last_name)
     SELECT first_name, last_name FROM sakila.staff;
 ```
 
-## Exercicios
-
+## Exercicio
 1. Insira um novo funcionário na tabela sakila.staff.
 ```sh
 INSERT INTO sakila.staff (first_name, last_name, address_id, email, store_id, active, username, password)
