@@ -3,16 +3,16 @@
 Exemplo:
 ```
 SELECT
-    c.customer_id,
-    c.first_name,
-    c.last_name,
-    a.actor_id,
-    a.first_name,
-    a.last_name
-FROM customer AS c
-LEFT JOIN actor AS a
-ON c.last_name = a.last_name
-ORDER BY c.last_name;
+    AA.customer_id,
+    AA.first_name,
+    AA.last_name,
+    BB.actor_id,
+    BB.first_name,
+    BB.last_name
+FROM customer AS AA
+LEFT JOIN actor AS BB
+ON AA.last_name = BB.last_name
+ORDER BY AA.last_name;
 ```
 
 ---
@@ -22,15 +22,15 @@ ORDER BY c.last_name;
 Exemplo:
 ```
 SELECT
-    c.customer_id,
-    c.first_name,
-    c.last_name,
-    a.actor_id,
-    a.first_name,
-    a.last_name
-FROM customer AS c
-RIGHT JOIN actor AS a
-ON c.last_name = a.last_name
-ORDER BY c.last_name;
+    AA.customer_id,
+    AA.first_name,
+    AA.last_name,
+    BB.actor_id,
+    BB.first_name,
+    BB.last_name
+FROM customer AS AA
+RIGHT JOIN actor AS BB
+ON AA.last_name = BB.last_name
+ORDER BY AA.last_name;
 ```
 
