@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "1ce14134-589b-49f6-b1d7-8cbfa8393311",
+    "colId": "b33e344c-4251-40ea-9da9-1a3849dd6751",
+    "containerId": "",
+    "name": "listUsers",
+    "url": "localhost:3000/user",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2022-06-28T18:18:08.261Z",
+    "modified": "2022-06-28T18:19:56.121Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "bc91fcc8-7745-42d2-9545-133ca98027af",
+    "colId": "b33e344c-4251-40ea-9da9-1a3849dd6751",
+    "containerId": "",
+    "name": "getUser",
+    "url": "localhost:3000/user/1",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-06-28T18:18:19.004Z",
+    "modified": "2022-06-28T18:18:24.995Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "0432ec94-a51f-4f1e-a3d7-af2f596e9f73",
+    "colId": "b33e344c-4251-40ea-9da9-1a3849dd6751",
+    "containerId": "",
+    "name": "editUser",
+    "url": "localhost:3000/user/1",
+    "method": "PUT",
+    "sortNum": 30000,
+    "created": "2022-06-28T18:18:36.020Z",
+    "modified": "2022-06-28T18:18:56.027Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\": \"John doe\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "553274a7-b98e-4b43-b55c-68056f38b5c1",
+    "colId": "b33e344c-4251-40ea-9da9-1a3849dd6751",
+    "containerId": "",
+    "name": "addUser",
+    "url": "localhost:3000/user",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2022-06-28T18:19:02.319Z",
+    "modified": "2022-06-28T18:19:45.635Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@mail.com\",\n    \"password\": \"123456\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "f0befbd9-57ff-42f2-9e43-ed86c1f3bff3",
+    "colId": "b33e344c-4251-40ea-9da9-1a3849dd6751",
+    "containerId": "",
+    "name": "removeUser",
+    "url": "localhost:3000/user/1",
+    "method": "DELETE",
+    "sortNum": 35000,
+    "created": "2022-06-28T18:19:39.936Z",
+    "modified": "2022-06-28T18:20:06.890Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "name": "sd-019-b-live-lectures",
+  "version": "1.0.0",
+  "description": "Este repositório armazena os códigos e scripts fornecidos durante as aulas ao vivo pelos especialistas da Trybe.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch src src/index.js",
+    "test": "mocha ./tests/**/*.test.js --exit -t 999999"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tryber/sd-019-b-live-lectures.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tryber/sd-019-b-live-lectures/issues"
+  },
+  "homepage": "https://github.com/tryber/sd-019-b-live-lectures#readme",
+  "dependencies": {
+    "@types/chai-as-promised": "^7.1.5",
+    "chai-as-promised": "^7.1.1",
+    "express": "^4.18.1",
+    "express-async-errors": "^3.1.1",
+    "joi": "^17.6.0",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
+    "@types/sinon": "^10.0.12",
+    "chai": "^4.3.6",
+    "eslint": "^6.8.0",
+    "eslint-config-trybe-backend": "^1.0.4",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.18",
+    "sinon": "^14.0.0"
+  }
+}

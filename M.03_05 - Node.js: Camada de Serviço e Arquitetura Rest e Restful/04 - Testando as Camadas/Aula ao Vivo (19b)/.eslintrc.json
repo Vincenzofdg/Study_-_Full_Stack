@@ -1,0 +1,7 @@
+{
+  "extends": "trybe-backend",
+  "rules": {
+    "mocha/no-mocha-arrows": "off",
+    "no-unused-expressions": "off"
+  }
+}
