@@ -1,0 +1,35 @@
+[
+  {
+    "_id": "bc3e538c-f68f-49f9-b4f1-1e0ae28b6618",
+    "colId": "46e0d4e2-91eb-4b0e-969b-527f4f98fb29",
+    "containerId": "c1a27fb4-4874-4b15-b768-7c5f2cb59e31",
+    "name": "listUsers",
+    "url": "localhost:3000/users",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-07-07T20:27:30.189Z",
+    "modified": "2022-07-08T19:20:25.190Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "897d714e-59e8-4952-8d43-a244063f9181",
+    "colId": "46e0d4e2-91eb-4b0e-969b-527f4f98fb29",
+    "containerId": "c1a27fb4-4874-4b15-b768-7c5f2cb59e31",
+    "name": "addUser",
+    "url": "localhost:3000/users",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-07-07T20:50:14.549Z",
+    "modified": "2022-07-08T19:20:26.139Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@email.com\",\n    \"passwordHash\": \"123456\",\n    \"phone\": \"(11) 1 1111 1111\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]
